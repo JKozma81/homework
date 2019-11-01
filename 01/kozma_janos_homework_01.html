@@ -18,7 +18,7 @@
       <h3>Mi az az URL?</h3>
       <p>
         Az URL vagy <strong>Uniform Resource Locator</strong> a felhasználó
-        által a böngésző címsorába beírt webcím, mely meghatározza, hogy a kért
+        által a böngésző címsorába beírt szöveges webcím, mely meghatározza, hogy a kért
         adatot (webhely, kép, videó stb.) hol lehet elérni.
       </p>
     </section>
@@ -53,8 +53,7 @@
       <h3>Mi az Internet Szolgáltatók Tanácsa és mi a feladata?</h3>
       <p>
         A magyarországi internet szolgáltatokat egybefogó társaság mely felelős a magyar domain nevek szabályok
-        szerinti
-        kezeléséért.
+        szerinti kezeléséért.
       </p>
     </section>
     <section>
@@ -78,7 +77,7 @@
 
           &lt;/head&gt;
                 
-          &lt;body&gt; - A HTML dokumentum "törzse", ami alapján maga a weblap felépül.
+          &lt;body&gt; - A HTML dokumentum "törzse", ami alapján maga a weblap "vizuális" része felépül.
 
           &lt;/body&gt;
           &lt;/html&gt;
@@ -105,7 +104,9 @@
     </section>
     <section>
       <h3>Mik azok a metaadatok?</h3>
-      <p>Olyan adatok amelyek csak gépi kóddá alakulnak és a felhasználók számára láthatatlanok.</p>
+      <p>
+        Olyan adatok amelyek csak gépi kóddá alakulnak és a felhasználók számára láthatatlanok. Extra információval rendelkezhetnek a weboldalon található adatokról.
+      </p>
     </section>
     <section>
       <h3>Mi az a &lt;title&gt; és hova írhatjuk? Mi az a &lt;br&gt;?</h3>
@@ -119,7 +120,7 @@
       <h3>Mik azok a HTML elemek?</h3>
       <p>
         Olyan elemek melyek általában egy nyitó és egy záró tag-el rendelkeznek
-        és magukba foglalják a nyitó tag-jüktől a tartalmukon keresztül a záró tag-ig mindent.
+        és magukba foglalnak a nyitó tag-jüktől a tartalmukon keresztül a záró tag-ig mindent.
       </p>
     </section>
     <section>
@@ -130,18 +131,18 @@
       <h3>Mit jelent az, hogy egy tag páros vagy páratlan?</h3>
       <p>
         Páros tag-ekről akkor beszélünk, ha van egy nyitó és egy záró tag (pl.: &lt;body&gt;&lt;/body&gt;),
-        amin belül magát az adatokat megadjuk. Páratlan pedig amelyik nem rendelkezik lezáró tag-el(pl.:&lt;br&gt;).
+        amin belül magát az adatokat megadjuk, egyébb tag-eket hozhatunk létre.<br>
+        Páratlan pedig amelyik nem rendelkezik lezáró tag-el(pl.:&lt;br&gt;, &lt;hr&gt;, &lt;img&gt;).
       </p>
     </section>
     <section>
       <h3>Mit jelent az, hogy a HTML dokumentum fa szerkezetű?</h3>
-      <p>Egy gyökér elemből indul kis és több gyermek elemben végződik a dokumentum.</p>
+      <p>Egy gyökér elemből indul ki és több gyermek elemben végződik a dokumentum, de minden gyermek elemnek csak egy szülő eleme van.</p>
     </section>
     <section>
       <h3>Mi a különbség a DOM és a forráskód között?</h3>
       <p>
-        A forráskód maga a fejlesztő által írt kódsort/sorokat jelenti, míg a DOM vagy <strong>Document Object
-          Model</strong>
+        A forráskód maga a fejlesztő által írt kódot jelenti, míg a DOM vagy <strong>Document Object Model</strong>
         a böngésző által a forráskód alapján létrehozott/felépített weboldal szerkezet.
       </p>
     </section>
@@ -168,7 +169,7 @@
         Szemantikus HTML-ről akkor beszélünk, amikor speciális tag-ek használatával építjük fel a weboldalt,
         hogy bizonyos eszközök könnyebben/jobban értelmezzék azt és a megfelelő módon "reagáljanak", valamint egyértelmű
         "jelentést" adhatunk a weboldal egyes részeinek.
-        Ez azért fontos, mert így az internet egyre jobban "akadálymentesíthető", pontosabb értelmet nyernek a weboldal
+        Ez azért fontos, mert így az internetes oldalak egyre jobban "élvezhetőbbé" válnak, valamint pontosabb értelmet nyernek az oldal
         egyes részei.
       </p>
     </section>
@@ -186,30 +187,27 @@
         böngésző feldolgozná azt, mint HTML kód?
       </h3>
       <p>
-        Html weblapokon bármilyen kód/kódrészlet megjelenítését a &lt;pre&gt;
-        és &lt;code&gt; tag-ek használatával lehet megoldani anélkül, hogy a
-        böngésző feldolgozná azt. A &lt;pre&gt; tag felel magáért a
-        kód formázásának megtartásáért, míg a &lt;code&gt; jelöli ki magát a
-        kód blokkot. Arra viszont figyelni kell, hogy a tag-eknél
-        használt &lt; &gt; speciális karaktereket a <strong>&amp;lt;</strong> és <strong>&amp;gt;</strong> HTML
+        Html weblapokon bármilyen kód/kódrészlet megjelenítését a &lt;code&gt; tag használatával lehet megoldani anélkül, hogy a
+        böngésző feldolgozná azt. Célszerű ezen kívül a kódot egy &lt;pre&gt; tag-ben létrehozni, hogy az a formázást is megtartsa.
+        Arra viszont figyelni kell, hogy a tag-eknél használt &lt; &gt; speciális karaktereket a <strong>&amp;lt;</strong> és <strong>&amp;gt;</strong> HTML
         entitásokkal kell helyettesíteni.
       </p>
 
       <h3>Példa:</h3>
       <pre>
-            <code>
-                &lt;!DOCTYPE html&gt;
-                &lt;html&gt;
-                    &lt;head&gt;
-                        &lt;title&gt;Példa kód&lt;/title&gt;
-                    &lt;/head&gt;
+        <code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html&gt;
+          &lt;head&gt;
+            &lt;title&gt;Példa kód&lt;/title&gt;
+          &lt;/head&gt;
     
-                    &lt;body&gt;
-                        &lt;p&gt;Példa forráskód&lt;/p&gt;
-                    &lt;/body&gt;
-                &lt;/html&gt;
-            </code>
-        </pre>
+          &lt;body&gt;
+            &lt;p&gt;Példa forráskód&lt;/p&gt;
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </code>
+      </pre>
     </section>
     <hr />
     <section>
@@ -232,25 +230,159 @@
       </h3>
     </header>
 
-    <!-- <section>
-      <h3></h3>
-      <p></p>
+    <section>
+      <h3>A &lt;strong&gt; HTML szemantikus tag:</h3>
+      <p>
+        Ahogy a szövegszerkesztés során kiemelhetünk egyes fontosabb szöveg részleteket, úgy azt HTML dokumentumok létrehozása során is meg tehetjük. Erre szolgál a &lt;strong&gt; HTML tag. Az általában szöveg kiemelésére használt &lt;b&gt; -taggel ellentétében a &lt;strong&gt; szemantikus tag nem csak magát a szöveget emeli ki, hanem egyes szöveg felolvasó eszközökön a kiemelt szövegrészt ki is hangsúlyozza az eszköz, utalva ezzel a fontosságára. Egy szövegkörnyezetben tetszőleges számú &lt;strong&gt; tag-et használhatunk.
+        A kiemelní kívánt fontosabb szövegrészt a nyitó és a záró tag-ek közé kell helyezni az alább látható módon.
+      </p>
+
+      <h4>Példa a &lt;strong&gt; tag használatára:</h4>
+      <pre>
+        <code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html&gt;
+          &lt;head&gt;
+            &lt;title&gt;Példa kód &lt;strong&gt; -tag használatára &lt;/title&gt;
+          &lt;/head&gt;
+
+          &lt;body&gt;
+            &lt;p&gt;
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. A &lt;strong&gt;dolor&lt;/strong&gt; suscipit, unde, obcaecati reprehenderit aliquid distinctio molestias voluptatum quisquam laudantium tempore eos recusandae porro aperiam saepe laborum consequuntur voluptatibus incidunt.
+              Fugiat cum animi eveniet quidem placeat officiis esse, &lt;strong&gt;assumenda qui&lt;/strong&gt;, fugit iure incidunt? Repellat ullam voluptates iusto non officiis illo eaque distinctio fugiat tempore! Soluta tenetur amet ab cumque nostrum?
+              Ducimus itaque ut corrupti perferendis maiores ipsa &lt;strong&gt;incidunt&lt;/strong&gt; ea saepe magni eum quis voluptates vel vero, facilis nobis at ab hic totam eaque quia et labore. Vero perspiciatis assumenda sequi.
+            &lt;/p&gt;
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </code>
+      </pre>
     </section>
 
     <section>
-      <h3></h3>
-      <p></p>
+      <h3>A &lt;main&gt; HTML szemantikus tag:</h3>
+      <p>
+        A HTML megjelenésekor nem volt lehetőség a weboldalon a fő tartalom kijelölésére, erre a feladtra hozták létre a &lt;main&gt; HTML szemantikus tag-et.
+        Egy megfelelően felépített weboldal csak egy látható &lt;main&gt;tag-et tartalmaz, amely hierarhikusan csak és kizárólag body, div vagy form szülő tag-ekkel rendelkezik. Egy weboldalon ebből a tag-ből is szerepelhet több, de ebben az esetben meg kell oldani, hogy csak az egyik legyen látható a felhasználó számára és a többi rejtve maradjon.
+      </p>
+      <h4>Példa a &lt;main&gt; tag használatára:</h4>
+      <pre>
+        <code>
+          &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+            &lt;head&gt;
+              &lt;title&gt;Példa kód &lt;main&gt; -tag használatára &lt;/title&gt;
+            &lt;/head&gt;
+
+            &lt;body&gt;
+              &lt;main&gt;
+              &lt;h1&gt;A weboldal fontosabb fő része&lt;/h1&gt;
+                &lt;article&gt;
+                  &lt;h2&gt;Első fórum bejegyzés&lt;/h2&gt;
+                  &lt;p&gt;
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eius itaque, rem minus, sunt reprehenderit vero repudiandae tenetur fugiat, culpa tempore commodi animi eligendi debitis. Porro odit voluptas nobis quidem.
+                    Saepe, pariatur. Quam, voluptatem at. Ratione rem possimus, voluptate laudantium soluta perspiciatis debitis unde cum voluptatum amet ea explicabo sint ullam corrupti. Et quibusdam necessitatibus molestias, fugit eos optio suscipit.
+                    Magnam fugiat laboriosam ullam inventore illum ipsam quos. Voluptate, ipsa ad? Voluptate commodi doloremque libero quis! Quaerat distinctio, impedit facere eum ratione, eos sequi, dolores enim eligendi vel voluptatibus illo.
+                    Ab atque voluptatem ducimus. Incidunt maxime neque et dolorem, odio, laborum repudiandae eius molestias ducimus rem odit ipsam, error a esse aut dignissimos mollitia optio expedita qui? Impedit, quos error!
+                  &lt;/p&gt;
+
+                  &lt;h2&gt;Második fórum bejegyzés&lt;/h2&gt;
+                  &lt;p&gt;
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi sed praesentium recusandae quis voluptatem voluptates autem amet optio cum ea impedit asperiores, tempora debitis. Fugit vero quo maxime accusantium reiciendis?
+                    Recusandae veritatis debitis distinctio. Nobis perferendis voluptates sit eligendi quam assumenda quaerat exercitationem, autem repellendus rerum ipsam inventore corporis natus amet, eaque, nesciunt saepe? Incidunt alias reiciendis dolores vero enim.
+                    Fuga facere animi necessitatibus sapiente quasi recusandae, asperiores quaerat officia maxime tempora ea neque amet excepturi saepe eos, veritatis consequatur quae eaque doloribus unde expedita? Nemo eum ex impedit recusandae.
+                    Ipsa quae saepe hic quos cum sint omnis ab. Dolore doloribus, recusandae eaque quos ullam architecto quasi facilis laudantium eos culpa odio dolores dolor tempora, provident necessitatibus ad nulla quis?
+                    Earum beatae nemo eos. Ut ad consequuntur possimus incidunt assumenda ducimus, cupiditate neque illo? Sequi repellendus quas deleniti consequuntur, voluptatibus, ducimus totam perferendis magnam nam quidem ipsum molestiae aspernatur nobis.
+                    Magnam nesciunt tenetur alias, quas accusamus nulla repellat deleniti aliquam dolorem tempore facilis itaque nihil illum repellendus voluptatum! In amet explicabo aspernatur reprehenderit dicta officiis eos repellendus, qui sequi ipsa.
+                  &lt;/p&gt;
+
+                  &lt;h2&gt;Harmadik fórum bejegyzés&lt;/h2&gt;
+                  &lt;p&gt;
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque nulla minima maxime deleniti. Possimus, autem esse doloribus consequuntur repellendus vero odit velit ipsa eos odio minima voluptatibus voluptatum placeat fuga.Qui in laboriosam expedita esse omnis, nisi quis est ullam quibusdam, perspiciatis tempore facere dolores dolorem. Vel a consectetur quos, laboriosam soluta praesentium cum, magnam perspiciatis neque rerum molestiae alias.
+                  &lt;/p&gt;
+                &lt;/article&gt;
+              &lt;/main&gt;
+
+              &lt;article&gt;
+                &lt;h2&gt;Másodlagos szereppel rendelkező hozzászólás/megjegyzés&lt;/h2&gt;
+                &lt;p&gt;
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, ipsum explicabo distinctio reiciendis fugiat nulla dolorem voluptatum voluptatibus perferendis esse quae suscipit doloremque quasi doloribus, rem aspernatur minus! Aut, consectetur.Exercitationem excepturi dolores ullam eligendi obcaecati ipsam modi sequi autem, earum consequuntur itaque! Aut officiis eos dolorem obcaecati cupiditate repellendus accusantium fugiat et laborum, dicta magnam ut in qui voluptate.
+                &lt;/p&gt;
+              &lt;/article&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </code>
+      </pre>
     </section>
+
+
     <section>
-      <h3></h3>
-      <p></p>
-    </section> -->
+      <h3>A &lt;nav&gt; szemantikus tag:</h3>
+      <p>
+        A &lt;nav&gt; szemantikus HTML tag-et a weboldalon található navigációs rész kijelölésére hozták létre. Navigációs linkeket csoportosít magába, melyek a weboldal egyes részeire, vagy másik weblapokra navigálhatják a felhasználót. Egy weboldalon több ilyen tag is használható, de funkcióikat tekintve külön csoportosítandóak. Elkülönítve az egy oldalon belüli navigációért felelőseket a más weboldalakra navigálóktól, ahogy az a lentebbi példa kódban is látható.
+      </p>
+      <pre>
+        <code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html&gt;
+          &lt;head&gt;
+            &lt;title&gt;Példa &lt;nav&gt; html tag használatára&lt;/title&gt;
+          &lt;/head&gt;
+    
+          &lt;body&gt;
+
+          &lt;nav&gt;
+            &lt;a href="/home"&gt;Home&lt;/a&gt;
+            &lt;a href="/blog"&gt;Blog&lt;/a&gt;
+            &lt;a href="/contacts"&gt;Contacts&lt;/a&gt;
+            &lt;a href="/about"&gt;About&lt;/a&gt;
+          &lt;/nav&gt;
+          &lt;nav&gt;
+            &lt;a href="#first_post"&gt;First post&lt;/a&gt;
+            &lt;a href="#second_post"&gt;Second post&lt;/a&gt;
+            &lt;a href="#third_post"&gt;Third post&lt;/a&gt;
+          &lt;/nav&gt;
+          
+          &lt;article id="first_post"&gt;
+            &lt;h2&gt;First forum post&lt;/h2&gt;
+            &lt;p&gt;
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, ipsum explicabo distinctio reiciendis fugiat nulla dolorem voluptatum voluptatibus perferendis esse quae suscipit doloremque quasi doloribus, rem aspernatur minus! Aut, consectetur.Exercitationem excepturi dolores ullam eligendi obcaecati ipsam modi sequi autem, earum consequuntur itaque! Aut officiis eos dolorem obcaecati cupiditate repellendus accusantium fugiat et laborum,  dicta magnam ut in qui voluptate.
+            &lt;/p&gt;
+          &lt;/article&gt;
+
+          &lt;article id="second_post"&gt;
+            &lt;h2&gt;Second forum post&lt;/h2&gt;
+            &lt;p&gt;
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, ipsum explicabo distinctio reiciendis fugiat nulla dolorem voluptatum voluptatibus perferendis esse quae suscipit doloremque quasi doloribus, rem aspernatur minus! Aut, consectetur.Exercitationem excepturi dolores ullam eligendi obcaecati ipsam modi sequi autem, earum consequuntur itaque! Aut officiis eos dolorem obcaecati cupiditate repellendus accusantium fugiat et laborum,  dicta magnam ut in qui voluptate.
+            &lt;/p&gt;
+          &lt;/article&gt;
+
+          &lt;article id="third_post"&gt;
+            &lt;h2&gt;Third forum post&lt;/h2&gt;
+            &lt;p&gt;
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, ipsum explicabo distinctio reiciendis fugiat nulla dolorem voluptatum voluptatibus perferendis esse quae suscipit doloremque quasi doloribus, rem aspernatur minus! Aut, consectetur.Exercitationem excepturi dolores ullam eligendi obcaecati ipsam modi sequi autem, earum consequuntur itaque! Aut officiis eos dolorem obcaecati cupiditate repellendus accusantium fugiat et laborum,  dicta magnam ut in qui voluptate.
+            &lt;/p&gt;
+          &lt;/article&gt;
+            
+          &lt;/body&gt;
+          &lt;/html&gt;
+        </code>
+      </pre>
+    </section> 
   </article>
 
   <!-- 
 Gyakorlat
 Válassz ki egy szövegszintű, egy csoportosító és egy szekciót képező elemet a HTML Living Standardból és írj egy kb. 5 mondatos összefoglalót az egyes elemekről.
 Írj egy-egy példát is az elemek használatáról. A példák teljesértékű HTML oldalak legyenek.
+
+              &lt;p&gt;
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. A &lt;strong&gt;dolor&lt;/strong&gt; suscipit, unde, obcaecati reprehenderit aliquid distinctio molestias voluptatum quisquam laudantium tempore eos recusandae porro aperiam saepe laborum consequuntur voluptatibus incidunt.
+                Fugiat cum animi eveniet quidem placeat officiis esse, &lt;strong&gt;assumenda qui&lt;/strong&gt;, fugit iure incidunt? Repellat ullam voluptates iusto non officiis illo eaque distinctio fugiat tempore! Soluta tenetur amet ab cumque nostrum?
+                Ducimus itaque ut corrupti perferendis maiores ipsa &lt;strong&gt;incidunt&lt;/strong&gt; ea saepe magni eum quis voluptates vel vero, facilis nobis at ab hic totam eaque quia et labore. Vero perspiciatis assumenda sequi.
+              &lt;/p&gt;
+
+
+
        -->
 
 </body>
