@@ -16,96 +16,165 @@
             <h2>1. Írjunk HTMLt a szelektorhoz. Ahol több is lehetséges, Írjunk kettőt. A szóbanforgó elemet jelöljük HTML megjelenéssel.</h2>
 
             <p>Szelektorok: </p>
-            <ul>
+            <ol>
                 <li><strong>main p.highlighted</strong></li>
                 <li><strong>nav &gt; ul a</strong></li>
                 <li><strong>article section:first-child h2</strong></li>
                 <li><strong>#intro .highlighted.right-aligned</strong></li>
                 <li><strong>section &gt; h2 + p &gt; span.strong</strong></li>
-            </ul>
+            </ol>
 
             <h2>Megoldások: </h2>
 
             <div class="codebox-container">
                 <div class="codebox">
-                    <h4 class="codebox--title">HTML code example:</h4>
+                    <h4 class="codebox--title">HTML code example 1 for selector 1:</h4>
                     <pre>
                         <code class="source-code">
-                            html code here
+    &lt;main&gt;
+        &lt;article&gt;
+            &lt;p class="highlighted"&gt;
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Reprehenderit, saepe perferendis sed totam 
+                ipsam cumque esse harum eveniet natus magnam
+                eius nulla ad molestiae,
+                debitis asperiores beatae ipsum provident quas!
+            &lt;/p&gt;
+        &lt;/article&gt;
+    &lt;/main&gt;
                         </code>
                     </pre>
                 </div>
 
                 <div class="codebox">
-                    <h4 class="codebox--title">HTML code example:</h4>
+                    <h4 class="codebox--title">HTML code example 2 for selector 1:</h4>
                     <pre>
                         <code class="source-code">
-                            html code here
+    &lt;main&gt;
+        &lt;article&gt;
+            &lt;section&gt;
+                &lt;p class="highlighted"&gt;
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Reprehenderit, saepe perferendis sed totam 
+                    ipsam cumque esse harum eveniet natus magnam
+                    eius nulla ad molestiae,
+                    debitis asperiores beatae ipsum provident quas!
+                &lt;/p&gt;
+            &lt;section&gt;
+        &lt;/article&gt;
+    &lt;/main&gt;
                         </code>
                     </pre>
                 </div>
 
                 <div class="codebox">
-                    <h4 class="codebox--title">HTML code example:</h4>
+                    <h4 class="codebox--title">HTML code example 1 for selector 2:</h4>
                     <pre>
                         <code class="source-code">
-                            html code here
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a&gt;Link&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;ul&gt;
+    &lt;nav&gt;
                         </code>
                     </pre>
                 </div>
 
                 <div class="codebox">
-                    <h4 class="codebox--title">HTML code example:</h4>
+                    <h4 class="codebox--title">HTML code example 2 for selector 2:</h4>
                     <pre>
                         <code class="source-code">
-                            html code here
+    &lt;aside&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+            &lt;li&gt;
+                &lt;a&gt;Back to homepage&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/aside&gt;
                         </code>
                     </pre>
                 </div>
                 <div class="codebox">
-                    <h4 class="codebox--title">HTML code example:</h4>
+                    <h4 class="codebox--title">HTML code example 1 for selector 3:</h4>
                     <pre>
                         <code class="source-code">
-                            html code here
+    &lt;article&gt;
+    &lt;section&gt;
+        &lt;div&gt;
+            &lt;h2&gt;Subtitle 1&lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+        ...
+        &lt;/div&gt;
+        &lt;div&gt;
+        ...
+        &lt;/div&gt;
+        &lt;div&gt;
+        ...
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;/article&gt;
                         </code>
                     </pre>
                 </div>
                 <div class="codebox">
-                    <h4 class="codebox--title">HTML code example:</h4>
+                    <h4 class="codebox--title">HTML code example 2 for selector 3:</h4>
                     <pre>
                         <code class="source-code">
-                            html code here
+    &lt;article&gt;
+        &lt;section&gt;
+            &lt;aside&gt;
+            &lt;h2&gt;Subtitle 2&lt;/h2&gt;
+            &lt;nav&gt;
+                &lt;a&gt;Post 1&lt;/a&gt;
+                &lt;a&gt;Post 2&lt;/a&gt;
+                &lt;a&gt;Post 3&lt;/a&gt;
+            &lt;/nav&gt;
+            &lt;/aside&gt;
+        &lt;/section&gt;
+    &lt;/article&gt;
                         </code>
                     </pre>
                 </div>
                 <div class="codebox">
-                    <h4 class="codebox--title">HTML code example:</h4>
+                    <h4 class="codebox--title">HTML code example 1 for selector 4:</h4>
                     <pre>
                         <code class="source-code">
-                            html code here
+    &lt;article id="intro"&gt;
+        &lt;div class="highlighted right-aligned"&gt;
+            &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/article&gt;
                         </code>
                     </pre>
                 </div>
                 <div class="codebox">
-                    <h4 class="codebox--title">HTML code example:</h4>
+                    <h4 class="codebox--title">HTML code example 2 for selector 4:</h4>
                     <pre>
                         <code class="source-code">
-                            html code here
+    &lt;section id="intro"&gt;
+        &lt;img src="img.jpg" alt="image of the product" class="highlighted right-aligned"&gt;
+    &lt;/section&gt;
                         </code>
                     </pre>
                 </div>
                 <div class="codebox">
-                    <h4 class="codebox--title">HTML code example:</h4>
+                    <h4 class="codebox--title">HTML code example for selector 5:</h4>
                     <pre>
                         <code class="source-code">
-                            html code here
-                        </code>
-                    </pre>
-                </div><div class="codebox">
-                    <h4 class="codebox--title">HTML code example:</h4>
-                    <pre>
-                        <code class="source-code">
-                            html code here
+        &lt;section&gt;
+            &lt;h2&gt;Example&lt;/h2&gt;
+                &lt;p&gt;
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    &lt;span class="strong"&gt;Quaerat tempora&lt;/span&gt; molestias quis placeat
+                    illum cumque enim a nostrum quidem maxime,
+                    harum corporis hic obcaecati nesciunt soluta ipsum. Facere, repudiandae quidem.
+                &lt;/p&gt;
+        &lt;/section&gt;
                         </code>
                     </pre>
                 </div>
@@ -125,31 +194,31 @@
             </p>
 
             <h4>Alacsonyabb specificitású szelectorok: </h4>
-            <ul>
+            <ol>
                 <li><strong>main p.highlighted</strong></li>
                 <li><strong>nav &gt; ul a</strong></li>
                 <li><strong>article section:first-child h2</strong></li>
                 <li><strong>#intro .highlighted.right-aligned</strong></li>
                 <li><strong>section &gt; h2 + p &gt; span.strong</strong></li>
-            </ul>
+            </ol>
 
             <h4>Azonos specificitású szelectorok: </h4>
-            <ul>
+            <ol>
                 <li><strong>main p.highlighted</strong></li>
                 <li><strong>nav &gt; ul a</strong></li>
                 <li><strong>article section:first-child h2</strong></li>
                 <li><strong>#intro .highlighted.right-aligned</strong></li>
                 <li><strong>section &gt; h2 + p &gt; span.strong</strong></li>
-            </ul>
+            </ol>
 
             <h4>Magasabb specificitású szelectorok: </h4>
-            <ul>
+            <ol>
                 <li><strong>main p.highlighted</strong></li>
                 <li><strong>nav &gt; ul a</strong></li>
                 <li><strong>article section:first-child h2</strong></li>
                 <li><strong>#intro .highlighted.right-aligned</strong></li>
                 <li><strong>section &gt; h2 + p &gt; span.strong</strong></li>
-            </ul>
+            </ol>
         </article>
 
         <article>

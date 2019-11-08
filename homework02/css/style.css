@@ -38,14 +38,19 @@ article p {
 	line-height: 1.4;
 }
 
+ol,
 ul {
-	list-style-type: none;
 	padding: 10px 5px;
 	margin-left: 15px;
 }
 
+ol li,
 ul li {
 	padding: 5px 0;
+}
+
+ul {
+	list-style-type: none;
 }
 
 footer {
