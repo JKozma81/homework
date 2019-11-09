@@ -13,7 +13,8 @@
     <main class="main-content">
 
         <article>
-            <h2>1. Írjunk HTMLt a szelektorhoz. Ahol több is lehetséges, Írjunk kettőt. A szóbanforgó elemet jelöljük HTML megjelenéssel.</h2>
+            <h2>1. Írjunk HTMLt a szelektorhoz. Ahol több is lehetséges, Írjunk kettőt. A szóbanforgó elemet jelöljük
+                HTML megjelenéssel.</h2>
 
             <p>Szelektorok: </p>
             <ol>
@@ -166,15 +167,15 @@
                     <h4 class="codebox--title">HTML code example for selector 5:</h4>
                     <pre>
                         <code class="source-code">
-        &lt;section&gt;
-            &lt;h2&gt;Example&lt;/h2&gt;
-                &lt;p&gt;
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    &lt;span class="strong"&gt;Quaerat tempora&lt;/span&gt; molestias quis placeat
-                    illum cumque enim a nostrum quidem maxime,
-                    harum corporis hic obcaecati nesciunt soluta ipsum. Facere, repudiandae quidem.
-                &lt;/p&gt;
-        &lt;/section&gt;
+    &lt;section&gt;
+        &lt;h2&gt;Example&lt;/h2&gt;
+            &lt;p&gt;
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                &lt;span class="strong"&gt;Quaerat tempora&lt;/span&gt; molestias quis placeat
+                illum cumque enim a nostrum quidem maxime,
+                harum corporis hic obcaecati nesciunt soluta ipsum. Facere, repudiandae quidem.
+            &lt;/p&gt;
+    &lt;/section&gt;
                         </code>
                     </pre>
                 </div>
@@ -183,14 +184,26 @@
 
         <article>
             <h2>
-                2. Adjunk egy azonos specificitású, egy magasabb specificitású és egy alacsonyabb specificitású szelektort
+                2. Adjunk egy azonos specificitású, egy magasabb specificitású és egy alacsonyabb specificitású
+                szelektort
                 az iménti szelektorokhoz. Magyarázzuk el, hogy melyik esetben miért akkora a szelektor, amekkora
             </h2>
 
             <h2>Megoldások: </h2>
 
             <p>
-                Magyarázat: 
+                Ahhoz, hogy a feladatot meg tudjuk oldani, tudnunk kell, hogy mi is az a <strong>CSS
+                    specificitás</strong>. Ez egy olyan
+                szabály, mely meghatározza, hogy egy HTML elemre milyen CSS szabály kerül érvényesítésre, amennyiben
+                több egymással ütköző szabály is érvényben van.
+            </p>
+
+            <p>
+                Maga a meghatározás attól függ, hogy milyen típusú szelektorok és azokból darabszám szerint mennyi
+                szerepel a deklarált szelektorban.
+                Sorrend szerint a legfelső szinten az ID, alatta a Class / pseudo class, majd a típus szelektor és a
+                legvégén az "inline" azaz magában az elem tag-jében a style atribútumban deklarált szabályok zárják a
+                sort.
             </p>
 
             <h4>Alacsonyabb specificitású szelectorok: </h4>
@@ -266,7 +279,7 @@
 
             <section>
                 <h3>
-                    Félig áttetsző tartalom, mögötte egy fix pozícióban lévő háttérkép. 
+                    Félig áttetsző tartalom, mögötte egy fix pozícióban lévő háttérkép.
                     A kép legyen 300x300 méretű, és legyen középre rendezve a háttérben
                 </h3>
 
@@ -320,7 +333,9 @@
 
             <section>
                 <h3>
-                    Táblázat minden második sora legyen világos szürke, a páratlan sorok fehérek. Az első sor (az oszlopok fejlécei) legyen sötét hátterű és fehér színű félkövér legyen a betű. Minden sor, ha az egérmutatót fölé visszük, változzon világoskékre, kivéve a táblázat fejlécét
+                    Táblázat minden második sora legyen világos szürke, a páratlan sorok fehérek. Az első sor (az
+                    oszlopok fejlécei) legyen sötét hátterű és fehér színű félkövér legyen a betű. Minden sor, ha az
+                    egérmutatót fölé visszük, változzon világoskékre, kivéve a táblázat fejlécét
                 </h3>
 
                 <div class="codebox-container">
