@@ -1,104 +1,156 @@
 .hero {
-    height: 695px;
-    background: url("../img/hero.png");
-    text-align: center;
+	height: 695px;
+	background: url("../img/hero.png") center/cover;
+	text-align: center;
 }
 
 .hero .content {
-    display: inline-block;
-    font-size: 32px;
-    color: #11e88d;
-    background: rgba(0, 0, 0, 0.5);
-    width: 400px;
+	font-weight: bold;
+	font-size: 40px;
+	text-align: center;
+	color: white;
+	background: rgba(0, 0, 0, 0.5);
+	width: 50%;
+	display: inline-block;
+	margin-top: 250px;
+}
+
+.hero .btn {
+	display: block;
+	width: 350px;
+	margin: 40px auto;
+}
+
+.hero .btn a {
+	width: 350px;
+	text-transform: uppercase;
+}
+
+.green-text {
+	color: #11e88d;
 }
 
 .ribbon {
-    background: #11e88d;
-    color: white;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
+	background: #11e88d;
+	color: white;
+	font-size: 32px;
+	font-weight: bold;
+	text-align: center;
+	height: 150px;
 }
 
 .ribbon p {
-    margin: 0;
+	display: inline-block;
+	margin: 56px 0;
 }
 
 .pillars {
-    background: url("../img/course_bg.png") center/cover;
-    height: 350px;
-    padding: 100px;
-    font-size: 18px;
-    line-height: 1.5;
+	background: url("../img/course_bg.png") center/cover;
+	height: 520px;
+	padding: 150px;
+	font-size: 20px;
+	line-height: 1.5;
 }
 
 .pillar {
-    width: 350px;
-    display: inline-block;
-    vertical-align: top;
-    color: navy;
+	width: 350px;
+	display: inline-block;
+	vertical-align: top;
+	color: navy;
 }
 
 .pillar .title {
-    display: block;
-    text-transform: uppercase;
-    font-size: 32px;
-    font-weight: bold;
+	display: block;
+	text-transform: uppercase;
+	font-size: 35px;
+	font-weight: bold;
 }
 
 .pillar .title:hover {
-    color: #11e88d;
+	color: #11e88d;
 }
 
 .javastarter {
-    height: 500px;
-    background: #204778;
-    text-align: center;
+	height: 700px;
+	background: white;
+	text-align: center;
+}
+
+.javastarter div.cliped-bg {
+	background: #204778;
+	width: 100%;
+	height: 100%;
+	clip-path: polygon(28% 0, 100% 12%, 100% 100%, 0 100%, 0 12%);
+	padding: 150px 0;
+	font-weight: bold;
 }
 
 .javastarter h1 {
-    display: block;
-    color: white;
-    padding: 30px;
+	display: block;
+	color: white;
+	padding: 30px 0 50px 0;
+	font-size: 40px;
 }
-
 
 .image-div,
 .course-desc {
-    display: inline-block;
+	display: inline-block;
 }
 
 .javastarter .image-div {
-    width: 200px;
-    height: 200px;
-    background: url("../img/circle.png") no-repeat center;
-    background-size: cover;
+	width: 250px;
+	height: 250px;
+	background: url("../img/circle.png") no-repeat center;
+	background-size: cover;
+	margin: 0 50px;
 }
 
 .course-desc {
-    width: 500px;
-    text-align: left;
+	width: 700px;
+	text-align: left;
+	vertical-align: top;
 }
 
-.start-course {
-    background: #11e88d;
-    text-align: center;
+.course-desc h2 {
+	color: #11e88d;
+	font-size: 40px;
+}
+
+.course-desc p {
+	font-size: 20px;
+	color: white;
+}
+
+.course-desc h2,
+.course-desc p {
+	margin: 20px 0;
+}
+
+.course-desc :nth-last-child(2) {
+	color: #11e88d;
+}
+
+.course-desc .btn {
+	text-transform: uppercase;
 }
 
 .start-course .links {
-    display: inline-block;
-    height: 150px;
+	display: block;
+	height: 150px;
 }
 
-.start-course div.links:first-child {
-    color: white;
-    font-weight: bold;
+.start-course a {
+	text-decoration: none;
 }
 
-.start-course div.links:last-child {
-    color: yellow;
-    font-weight: bold;
-    text-transform: uppercase;
+.links:first-child {
+	color: white;
 }
 
-
+.links :last-child {
+	color: yellow;
+	text-transform: uppercase;
+}
+.links p {
+	display: inline-block;
+}
