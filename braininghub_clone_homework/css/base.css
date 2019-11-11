@@ -1,0 +1,17 @@
+header .upper .contacts,
+header .upper .social {
+    display: inline-block;
+}
+
+header .upper .social div {
+    display: inline-block;
+}
+
+header nav {
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+header nav li {
+    display: inline;
+}

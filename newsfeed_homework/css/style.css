@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: lightslategray;
+}
+
+.main-content {
+    width: 1000px;
+    min-height: 100%;
+    background: white;
+    margin: auto;
+    padding: 0 35px;
+    border: 1px solid black;
+}
+
+.heading {
+    padding: 30px 0 50px 0;
+}
+
+.sub-heading {
+    padding: 20px 0;
+}
+
+.post {
+    background: cadetblue;
+    border: 1px solid black;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.date {
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+.imagebox-medium {
+    width: 100%;
+    height: 200px;
+}
+
+.imagebox-medium {
+    display: inline-block;
+    width: 47%;
+    height: 300px;
+    vertical-align: top;
+}
+
+.imagebox-big {
+    width: 100%;
+    height: 600px;
+}
+
+.imagebox-small :nth-child(2) {
+    margin-right: 39px;
+    margin-left: 39px;
+}
+
+.small-image {
+    width: 30%;
+}
+
+.medium-image {
+    width: 100%;
+    height: 300px;
+}
+
+.large-image {
+    width: 100%;
+    height: 100%;
+}
+
+.textbox {
+    background: white;
+    padding: 15px;  
+}
+
+.textbox-medium {
+    display: inline-block;
+    width: 47%;
+    vertical-align: top;
+    height: 300px;
+    margin-left: 40px;
+}
+
+.textbox-large {
+    width: 100%;
+    margin-top: 30px;
+}

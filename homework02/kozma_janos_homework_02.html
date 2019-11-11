@@ -90,9 +90,9 @@
     &lt;aside&gt;
         &lt;nav&gt;
             &lt;ul&gt;
-            &lt;li&gt;
-                &lt;a&gt;Back to homepage&lt;/a&gt;
-            &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a&gt;Back to homepage&lt;/a&gt;
+                &lt;/li&gt;
             &lt;/ul&gt;
         &lt;/nav&gt;
     &lt;/aside&gt;
@@ -104,20 +104,20 @@
                     <pre>
                         <code class="source-code">
     &lt;article&gt;
-    &lt;section&gt;
-        &lt;div&gt;
-            &lt;h2&gt;Subtitle 1&lt;/h2&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-        ...
-        &lt;/div&gt;
-        &lt;div&gt;
-        ...
-        &lt;/div&gt;
-        &lt;div&gt;
-        ...
-        &lt;/div&gt;
-    &lt;/section&gt;
+        &lt;section&gt;
+            &lt;div&gt;
+                &lt;h2&gt;Subtitle 1&lt;/h2&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+            ...
+            &lt;/div&gt;
+            &lt;div&gt;
+            ...
+            &lt;/div&gt;
+            &lt;div&gt;
+            ...
+            &lt;/div&gt;
+        &lt;/section&gt;
     &lt;/article&gt;
                         </code>
                     </pre>
@@ -129,12 +129,12 @@
     &lt;article&gt;
         &lt;section&gt;
             &lt;aside&gt;
-            &lt;h2&gt;Subtitle 2&lt;/h2&gt;
-            &lt;nav&gt;
-                &lt;a&gt;Post 1&lt;/a&gt;
-                &lt;a&gt;Post 2&lt;/a&gt;
-                &lt;a&gt;Post 3&lt;/a&gt;
-            &lt;/nav&gt;
+                &lt;h2&gt;Subtitle 2&lt;/h2&gt;
+                &lt;nav&gt;
+                    &lt;a&gt;Post 1&lt;/a&gt;
+                    &lt;a&gt;Post 2&lt;/a&gt;
+                    &lt;a&gt;Post 3&lt;/a&gt;
+                &lt;/nav&gt;
             &lt;/aside&gt;
         &lt;/section&gt;
     &lt;/article&gt;
@@ -200,37 +200,108 @@
 
             <p>
                 Maga a meghatározás attól függ, hogy milyen típusú szelektorok és azokból darabszám szerint mennyi
-                szerepel a deklarált szelektorban.
-                Sorrend szerint a legfelső szinten az ID, alatta a Class / pseudo class, majd a típus szelektor és a
-                legvégén az "inline" azaz magában az elem tag-jében a style atribútumban deklarált szabályok zárják a
-                sort.
+                szerepel az alkalmazandó ütköző szabály szelektorában.
+                Sorrend szerint a legfelső szinten az !important flaggel ellátot szelektorok állnak, majd ezt követik
+                sorrendben az "inline" azaz a HTML tag style atribútumában deklarált szabályok, ezután jönnek az ID,
+                majd a Class / atribútum / pseudo-class szelektorok szabályai. A sort pedig a típus szelektorokra és
+                pseudo-elemekre vonatkozó szabályok zárják.
             </p>
 
             <h4>Alacsonyabb specificitású szelectorok: </h4>
             <ol>
-                <li><strong>main p.highlighted</strong></li>
-                <li><strong>nav &gt; ul a</strong></li>
-                <li><strong>article section:first-child h2</strong></li>
-                <li><strong>#intro .highlighted.right-aligned</strong></li>
-                <li><strong>section &gt; h2 + p &gt; span.strong</strong></li>
+                <li>
+                    <p><strong>main p.highlighted</strong></p>
+                    <p>A felső szelektor specificitása 0,0,1,2 az alsó pedig 0,0,0,2 ezért az alsó szelektor alacsonyabb
+                        rendű.</p>
+                    <p><strong>body h1</strong></p>
+                </li>
+                <li>
+                    <p><strong>nav &gt; ul a</strong></p>
+                    <p>A felső szelektor specificitása 0,0,0,3 az alsó pedig 0,0,0,2 ezért az alsó szelektor alacsonyabb
+                        rendű.</p>
+                    <p><strong>div h2</strong></p>
+                </li>
+                <li>
+                    <p><strong>article section:first-child h2</strong></p>
+                    <p>A felső szelektor specificitása 0,0,1,3 az alsó pedig 0,0,1,2 ezért az alsó szelektor alacsonyabb
+                        rendű.</p>
+                    <p><strong>main:last-child a</strong></p>
+                </li>
+                <li>
+                    <p><strong>#intro .highlighted.right-aligned</strong></p>
+                    <p>A felső szelektor specificitása 0,1,2,0 az alsó pedig 0,1,0,2 ezért az alsó szelektor alacsonyabb
+                        rendű.</p>
+                    <p><strong>#main-content h2 + p</strong></p>
+                </li>
+                <li>
+                    <p><strong>section &gt; h2 + p &gt; span.strong</strong></p>
+                    <p>A felső szelektor specificitása 0,0,1,4 az alsó pedig 0,0,1,3 ezért az alsó szelektor alacsonyabb
+                        rendű.</p>
+                    <p><strong>ul.product-list &gt; li a</strong></p>
+                </li>
             </ol>
 
             <h4>Azonos specificitású szelectorok: </h4>
             <ol>
-                <li><strong>main p.highlighted</strong></li>
-                <li><strong>nav &gt; ul a</strong></li>
-                <li><strong>article section:first-child h2</strong></li>
-                <li><strong>#intro .highlighted.right-aligned</strong></li>
-                <li><strong>section &gt; h2 + p &gt; span.strong</strong></li>
+                <li>
+                    <p><strong>main p.highlighted</strong></p>
+                    <p>A felső és alsó szelektorok specificitása is 0,0,1,2 ezért azonos specificitásúak.</p>
+                    <p><strong>body header.main-header</strong></p>
+                </li>
+                <li>
+                    <p><strong>nav &gt; ul a</strong></p>
+                    <p>A felső és alsó szelektorok specificitása is 0,0,0,3 ezért azonos specificitásúak.</p>
+                    <p><strong>header &gt; h2 + p</strong></p>
+                </li>
+                <li>
+                    <p><strong>article section:first-child h2</strong></p>
+                    <p>A felső és alsó szelektorok specificitása is 0,0,1,3 ezért azonos specificitásúak.</p>
+                    <p><strong>nav.main-nav ul a</strong></p>
+                </li>
+                <li>
+                    <p><strong>#intro .highlighted.right-aligned</strong></p>
+                    <p>A felső és alsó szelektorok specificitása is 0,1,2,0 ezért azonos specificitásúak.</p>
+                    <p><strong>#main_footer .contact-links.social-link</strong></p>
+                </li>
+                <li>
+                    <p><strong>section &gt; h2 + p &gt; span.strong</strong></p>
+                    <p>A felső és alsó szelektorok specificitása is 0,0,1,4 ezért azonos specificitásúak.</p>
+                    <p><strong>nav &gt; ul li a.main-nav--link</strong></p>
+                </li>
             </ol>
 
             <h4>Magasabb specificitású szelectorok: </h4>
             <ol>
-                <li><strong>main p.highlighted</strong></li>
-                <li><strong>nav &gt; ul a</strong></li>
-                <li><strong>article section:first-child h2</strong></li>
-                <li><strong>#intro .highlighted.right-aligned</strong></li>
-                <li><strong>section &gt; h2 + p &gt; span.strong</strong></li>
+                <li>
+                    <p><strong>main p.highlighted</strong></p>
+                    <p>A felső szelektor specificitása 0,0,1,2 az alsó pedig 0,1,1,2 ezért az alsó szelektor magasabb
+                        rendű.</p>
+                    <p><strong>#main-content h1.main-heading + p</strong></p>
+                </li>
+                <li>
+                    <p><strong>nav &gt; ul a</strong></p>
+                    <p>A felső szelektor specificitása 0,0,0,3 az alsó pedig 0,0,1,3 ezért az alsó szelektor magasabb
+                        rendű.</p>
+                    <p><strong>article.blogpost h2 + p</strong></p>
+                </li>
+                <li>
+                    <p><strong>article section:first-child h2</strong></p>
+                    <p>A felső szelektor specificitása 0,0,1,3 az alsó pedig 0,0,2,3 ezért az alsó szelektor magasabb
+                        rendű.</p>
+                    <p><strong>.main-nav ul li.menu-items a</strong></p>
+                </li>
+                <li>
+                    <p><strong>#intro .highlighted.right-aligned</strong></p>
+                    <p>A felső szelektor specificitása 0,1,2,0 az alsó pedig 0,1,2,1 ezért az alsó szelektor magasabb
+                        rendű.</p>
+                    <p><strong>#main-footer .social-links.facebook-link a</strong></p>
+                </li>
+                <li>
+                    <p><strong>section &gt; h2 + p &gt; span.strong</strong></p>
+                    <p>A felső szelektor specificitása 0,0,1,4 az alsó pedig 0,1,1,3 ezért az alsó szelektor magasabb
+                        rendű.</p>
+                    <p><strong>article #blog-heading + p em.italic</strong></p>
+                </li>
             </ol>
         </article>
 

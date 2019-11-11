@@ -1,0 +1,123 @@
+.hero {
+    height: 695px;
+    background: url("../img/hero.png");
+    text-align: center;
+}
+
+.hero .content {
+    display: inline-block;
+    font-size: 32px;
+    color: #11e88d;
+    background: rgba(0, 0, 0, 0.5);
+    width: 400px;
+}
+
+.ribbon {
+    background: #11e88d;
+    color: white;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.ribbon p {
+    margin: 0;
+}
+
+.pillars {
+    background: url("../img/course_bg.png") center;
+    height: 400px;
+    padding: 100px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.pillar {
+    width: 350px;
+    display: inline-block;
+    vertical-align: top;
+    color: navy;
+}
+
+.pillar .title {
+    display: block;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.pillar .title:hover {
+    color: #11e88d;
+}
+
+.javastarter {
+    height: 500px;
+    background: #204778;
+    text-align: center;
+}
+
+.javastarter h1 {
+    display: block;
+    color: white;
+    padding: 30px;
+}
+
+
+.image-div,
+.course-desc {
+    display: inline-block;
+}
+
+.javastarter .image-div {
+    width: 200px;
+    height: 200px;
+    background: url("../img/circle.png") no-repeat center;
+    background-size: cover;
+}
+
+.course-desc {
+    width: 500px;
+    text-align: left;
+}
+
+
+.btn {
+    background: #11e88d;
+    width: 200px;
+    height: 54px;
+    border-radius: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 18px 0;
+}
+
+.start-course {
+    background: #11e88d;
+    text-align: center;
+}
+
+.start-course .links {
+    display: inline-block;
+    height: 150px;
+}
+
+.start-course div.links:first-child {
+    color: white;
+    font-weight: bold;
+}
+
+.start-course div.links:last-child {
+    color: yellow;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
