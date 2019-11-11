@@ -25,8 +25,8 @@
 }
 
 .pillars {
-    background: url("../img/course_bg.png") center;
-    height: 400px;
+    background: url("../img/course_bg.png") center/cover;
+    height: 350px;
     padding: 100px;
     font-size: 18px;
     line-height: 1.5;
@@ -78,25 +78,6 @@
 .course-desc {
     width: 500px;
     text-align: left;
-}
-
-
-.btn {
-    background: #11e88d;
-    width: 200px;
-    height: 54px;
-    border-radius: 20px;
-    display: inline-block;
-    text-align: center;
-}
-
-.btn a {
-    text-decoration: none;
-    display: block;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    padding: 18px 0;
 }
 
 .start-course {

@@ -1,17 +1,113 @@
-header .upper .contacts,
-header .upper .social {
-    display: inline-block;
+header .upper,
+header .lower {
+    padding: 0 30px;
 }
 
-header .upper .social div {
+header .upper .contacts{
     display: inline-block;
+    width: 49%;
+}
+
+header .upper {
+    border-bottom: 1px solid #e7e7e7;
+}
+
+header .upper .social {
+    display: inline-block;
+    text-align: right;
+    width: 50%;
+}
+
+header .upper .contacts {
+    color: #747474;
+    font-size: 18px;
+    padding: 16px 0;
+}
+
+
+header .lower {
+    height: 100px;
+}
+
+header .lower img {
+    padding: 5px;
 }
 
 header nav {
     display: inline-block;
-    vertical-align: bottom;
+    vertical-align: top;
+    text-align: right;
+    width: 85%;
+    height: 90px;
+}
+
+header nav ul,
+header nav ul li {
+    margin: 0;
+    padding: 0;
+    height: 90px;
 }
 
 header nav li {
-    display: inline;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header nav li a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+    padding: 45px 2px 30px 2px;
+}
+
+header nav li:hover a {
+    border-top: 3px solid #333;
+    padding: 42px 2px 30px 2px;
+}
+
+.icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    color: white;
+    font-size: 23px;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+.facebook {
+    background: #3b5998;
+}
+
+.insta {
+    background: #4c5fd7;
+}
+
+.youtube {
+    background: #ff0000;
+}
+
+.linkedin{
+    background: #007bb5;
+}
+
+.btn {
+    background: #11e88d;
+    height: 54px;
+    border-radius: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn a {
+    text-decoration: none;
+    width: 200px;
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 18px 0;
 }
