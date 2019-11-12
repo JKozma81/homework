@@ -41,19 +41,20 @@ header nav {
 	height: 90px;
 }
 
-header nav ul,
-header nav ul li {
+header nav .main-menu,
+header nav .main-menu .main-menu-item {
 	margin: 0;
 	padding: 0;
 	height: 90px;
 }
 
-header nav li {
+header nav .main-menu .main-menu-item {
 	display: inline-block;
-	vertical-align: middle;
+	/* vertical-align: middle; */
+	position: relative;
 }
 
-header nav li a {
+header nav .main-menu .main-menu-item a {
 	text-decoration: none;
 	color: #333;
 	font-weight: bold;
@@ -62,9 +63,51 @@ header nav li a {
 	padding: 45px 2px 30px 2px;
 }
 
-header nav ul li:not(:last-child) a:hover {
+header nav .main-menu .main-menu-item:hover .main-menu-link {
 	border-top: 3px solid #333;
 	padding: 42px 2px 30px 2px;
+}
+
+header nav .main-menu .main-menu-item:hover i[class="icofont-heart"] {
+	color: #11e88d;
+}
+
+header nav .main-menu .main-menu-item:hover .sub-menu {
+	display: block;
+	border-top: 3px solid #333;
+	top: 97px;
+}
+
+header nav .main-menu .main-menu-item .sub-menu {
+	display: none;
+	position: absolute;
+	list-style: none;
+	width: 200px;
+	top: 100px;
+	left: 0;
+	text-align: left;
+}
+
+header nav .main-menu .main-menu-item .sub-menu li {
+	width: 200px;
+	min-height: 50px;
+}
+
+header nav .main-menu .main-menu-item .sub-menu a {
+	background: white;
+	color: #747474;
+	text-decoration: none;
+	width: 200px;
+	min-height: 50px;
+	font-size: 24px;
+	font-weight: 400;
+	padding: 10px 30px;
+	margin: 0;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+body {
+	font-family: 'PT Sans', sans-serif;
 }
 
 .icon {
@@ -111,4 +154,18 @@ header nav ul li:not(:last-child) a:hover {
 	font-weight: bold;
 	font-size: 18px;
 	padding: 18px 0;
+}
+
+.ribbon {
+	background: #11e88d;
+	color: white;
+	font-size: 32px;
+	font-weight: bold;
+	text-align: center;
+	height: 150px;
+}
+
+.ribbon p {
+	display: inline-block;
+	margin: 56px 0;
 }

@@ -30,37 +30,25 @@
 	color: #11e88d;
 }
 
-.ribbon {
-	background: #11e88d;
-	color: white;
-	font-size: 32px;
-	font-weight: bold;
-	text-align: center;
-	height: 150px;
-}
-
-.ribbon p {
-	display: inline-block;
-	margin: 56px 0;
-}
-
 .pillars {
 	background: url("../img/course_bg.png") center/cover;
 	height: 520px;
 	padding: 150px;
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 1.5;
 }
 
 .pillar {
-	width: 350px;
+	width: 400px;
 	display: inline-block;
 	vertical-align: top;
-	color: navy;
+	color: black;
+	margin: 0 5px;
 }
 
 .pillar .title {
 	display: block;
+	color: navy;
 	text-transform: uppercase;
 	font-size: 35px;
 	font-weight: bold;
@@ -137,6 +125,7 @@
 .start-course .links {
 	display: block;
 	height: 150px;
+	padding: 40px 0;
 }
 
 .start-course a {
@@ -145,12 +134,72 @@
 
 .links:first-child {
 	color: white;
+	font-weight: 400;
 }
 
 .links :last-child {
 	color: yellow;
 	text-transform: uppercase;
+	font-size: 50px;
+	font-weight: bold;
 }
+
 .links p {
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.story-board {
+	text-align: center;
+	background: rgba(216, 216, 216, 0.69);
+	font-size: 20px;
+	font-weight: normal;
+	min-height: 800px;
+}
+
+.story-board h1 {
+	font-size: 40px;
+	padding: 80px 0 30px;
+}
+
+.container {
+	width: 72%;
+	margin: auto;
+}
+
+.container .more {
+	color: #333;
+	text-transform: uppercase;
 	display: inline-block;
+	width: 82%;
+	background: #ebeaea;
+	height: 40px;
+	padding: 5px;
+	margin-top: 20px;
+}
+
+.card {
+	text-align: left;
+	background: white;
+	display: inline-block;
+	width: 25%;
+	vertical-align: top;
+	height: 500px;
+	margin: 20px;
+}
+
+.card img {
+	width: 100%;
+}
+
+.card .pillar {
+	padding: 20px;
+	width: 100%;
+}
+
+.card .pillar .title {
+	text-transform: none;
+	font-size: 32px;
+	margin-bottom: 10px;
 }

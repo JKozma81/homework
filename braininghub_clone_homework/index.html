@@ -4,6 +4,7 @@
 <head>
     <title>Braining Hub Clone</title>
     <link rel="stylesheet" href="./css/icofont.min.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,700i&display=swap" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="./css/reset.css">
     <link type="text/css" rel="stylesheet" href="./css/base.css">
     <link type="text/css" rel="stylesheet" href="./css/index.css">
@@ -24,16 +25,61 @@
         <div class="lower">
             <img src="./img/website_logo.jpg" alt="logo">
             <nav>
-                <ul>
-                    <li><a href="#">Rólunk <i class="icofont-rounded-down"></i></a></li>
-                    <li><a href="#">Alapozó képzések <i class="icofont-rounded-down"></i></a></li>
-                    <li><a href="#">Junior képzések <i class="icofont-rounded-down"></i></a></li>
-                    <li><a href="#"><i class="icofont-heart"></i> Nyilt nap <i class="icofont-rounded-down"></i></a>
+                <ul class="main-menu">
+                    <li class="main-menu-item">
+                        <a href="#" class="main-menu-link">Rólunk <i class="icofont-rounded-down"></i></a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Rólunk</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Hírlevél</a></li>
+                            <li><a href="#">Karrier</a></li>
+                            <li><a href="#">Sajtóanyagok</a></li>
+                            <li><a href="#">Partnereink</a></li>
+                        </ul>
                     </li>
-                    <li><a href="#">Vállalati képzések <i class="icofont-rounded-down"></i></a></li>
-                    <li><a href="#">Galéria</a></li>
-                    <li><a href="#">Kapcsolat</a></li>
-                    <li><a href="#"><i class="icofont-ui-search"></i></a></li>
+                    <li class="main-menu-item">
+                        <a href="#" class="main-menu-link">Alapozó képzések <i class="icofont-rounded-down"></i></a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Code 'n Play workshop</a></li>
+                            <li><a href="#">Java Starter Course</a></li>
+                            <li><a href="#">Webfejlesztés alapjai</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu-item">
+                        <a href="#" class="main-menu-link">Junior képzések <i class="icofont-rounded-down"></i></a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Junior JAVA</a></li>
+                            <li><a href="#">Junior Webfejlesztő</a></li>
+                            <li><a href="#">Adatközponti rendszermérnök</a></li>
+                            <li><a href="#">Angular</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu-item">
+                        <a href="#" class="main-menu-link"><i class="icofont-heart"></i> Nyilt nap <i class="icofont-rounded-down"></i></a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Junior JAVA</a></li>
+                            <li><a href="#">Webfejlesztő</a></li>
+                            <li><a href="#">Adatközponti rendszermérnök</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu-item">
+                        <a href="#" class="main-menu-link">Vállalati képzések <i class="icofont-rounded-down"></i></a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Docker</a></li>
+                            <li><a href="#">Scrum</a></li>
+                            <li><a href="#">Node.js</a></li>
+                            <li><a href="#">Vue.js</a></li>
+                            <li><a href="#">Angular</a></li>
+                            <li><a href="#">Laravel</a></li>
+                            <li><a href="#">Java</a></li>
+                            <li><a href="#">Git</a></li>
+                            <li><a href="#">Tesztelés</a></li>
+                            <li><a href="#">VBA</a></li>
+                        </ul>
+                    </li>
+                    <li class="main-menu-item"><a href="#" class="main-menu-link">Galéria</a></li>
+                    <li class="main-menu-item"><a href="#" class="main-menu-link">Kapcsolat</a></li>
+                    <li class="main-menu-item"><a href="#"><i class="icofont-ui-search"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -103,12 +149,35 @@
         </a>
     </section>
 
-    <section class="bootcamp-story">
-
+    <section class="story-board">
+        <h1>Coding bootcamp stories</h1>
+        <div class="container">
+            <div class="card">
+                <img src="./img/story-card-1.png" alt="pic01">
+                <div class="pillar">
+                    <h2 class="title">Pszichológusból HR-es, HR-esből Java fejlesztő</h2>
+                    <p>Mezei Lehel eredetileg pszichológiát tanult, majd a kiválasztás, toborzás területén találta magát, ami nem teljesen egyezett azzal, ahogy [...]</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/story-card-2.png" alt="pic02">
+                <div class="pillar">
+                    <h2 class="title">Java vagy web? Merre is induljak?</h2>
+                    <p>Mire jó pontosan egy féléves Braining Hub képzés? Ha már biztos vagy abban, hogy érdekel az informatika világa, [...]</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/story-card-3.png" alt="pic03">
+                <div class="pillar">
+                    <h2 class="title">Fejlesztőknél is keresettebb IT szakma?</h2>
+                    <p>2018 őszén megkeresett minket a Hewlett Packard Enterprise, hogy mi lenne, ha létrehoznánk egy közös rendszermérnöki képzést, mert [...]</p>
+                </div>
+            </div>
+            <div class="more">
+                <p>Load more posts</p>
+            </div>
+        </div>
     </section>
-
-
-
 </body>
 
 </html>
