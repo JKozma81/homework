@@ -1,3 +1,7 @@
+body {
+	font-family: "DINPro-Regular";
+}
+
 header .upper,
 header .lower {
 	padding: 0 30px;
@@ -12,7 +16,7 @@ header .upper {
 	border-bottom: 1px solid #e7e7e7;
 }
 
-header .upper .social {
+.social {
 	display: inline-block;
 	text-align: right;
 	width: 50%;
@@ -50,7 +54,6 @@ header nav .main-menu .main-menu-item {
 
 header nav .main-menu .main-menu-item {
 	display: inline-block;
-	/* vertical-align: middle; */
 	position: relative;
 }
 
@@ -63,20 +66,6 @@ header nav .main-menu .main-menu-item a {
 	padding: 45px 2px 30px 2px;
 }
 
-header nav .main-menu .main-menu-item:hover .main-menu-link {
-	border-top: 3px solid #333;
-	padding: 42px 2px 30px 2px;
-}
-
-header nav .main-menu .main-menu-item:hover i[class="icofont-heart"] {
-	color: #11e88d;
-}
-
-header nav .main-menu .main-menu-item:hover .sub-menu {
-	display: block;
-	border-top: 3px solid #333;
-	top: 97px;
-}
 
 header nav .main-menu .main-menu-item .sub-menu {
 	display: none;
@@ -106,18 +95,29 @@ header nav .main-menu .main-menu-item .sub-menu a {
 	border-bottom: 1px solid #e7e7e7;
 }
 
-body {
-	font-family: 'PT Sans', sans-serif;
+header nav .main-menu .main-menu-item:hover .main-menu-link {
+	border-top: 3px solid #333;
+	padding: 42px 2px 30px 2px;
+}
+
+header nav .main-menu .main-menu-item:hover i[class="icofont-heart"] {
+	color: #11e88d;
+}
+
+header nav .main-menu .main-menu-item:hover .sub-menu {
+	display: block;
+	border-top: 3px solid #333;
+	top: 97px;
 }
 
 .icon {
 	display: inline-block;
-	width: 35px;
-	height: 35px;
+	width: 32px;
+	height: 32px;
 	color: white;
 	font-size: 20px;
 	text-align: center;
-	padding: 7px;
+	padding: 3px;
 	margin: 5px;
 }
 
@@ -137,29 +137,33 @@ body {
 	background: #007bb5;
 }
 
+/* Button */
+
 .btn {
 	background: #11e88d;
-	height: 54px;
-	border-radius: 20px;
+	border-radius: 30px;
 	display: inline-block;
 	text-align: center;
 }
 
 .btn a {
 	text-decoration: none;
-	border-radius: 20px;
+	font-family: "DINPro-Bold";
+	border-radius: 30px;
 	width: 200px;
 	display: block;
 	color: white;
 	font-weight: bold;
-	font-size: 18px;
-	padding: 18px 0;
+	font-size: 20px;
+	padding: 13px 0;
 }
+
+/* Green ribbon */
 
 .ribbon {
 	background: #11e88d;
 	color: white;
-	font-size: 32px;
+	font-size: 26px;
 	font-weight: bold;
 	text-align: center;
 	height: 150px;
@@ -168,4 +172,176 @@ body {
 .ribbon p {
 	display: inline-block;
 	margin: 56px 0;
+}
+
+/* Footer */
+
+.upper-footer {
+	background: #0D3768;
+	text-align: center;
+	height: 700px;
+}
+
+.upper-footer :first-child h2,
+.upper-footer :last-child h2 {
+	padding-left: 13px;
+}
+
+.upper-footer h2 {
+	font-family: "DINPro-Bold";
+	text-transform: uppercase;
+	color: white;
+	font-size: 20px;
+	padding: 40px 0;
+}
+
+.upper-footer a {
+	color: white;
+	text-decoration: none;
+}
+
+.upper-footer .container {
+	width: 25%;
+	display: inline-block;
+	text-align: left;
+	vertical-align: top;
+	padding: 10px;
+}
+
+/* Footer left column */
+
+.upper-footer .container ul {
+	list-style: none;
+	color: white;
+	font-size: 12px;
+}
+
+.upper-footer .container ul li:hover,
+.upper-footer .container ul li:hover a {
+	color: #11e88d;
+}
+
+.upper-footer .container ul a {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.23);
+	display: inline-block;
+	width: 95%;
+	padding: 5px;
+}
+
+/* Footer middle column */
+
+.upper-footer form {
+	font-size: 16px;
+	color: white;
+}
+
+.upper-footer form .training p {
+	padding: 10px 5px 0 5px;
+	font-size: 16px;
+}
+
+.upper-footer form input[type="email"],
+.upper-footer form input[type="text"],
+.upper-footer form select {
+	height: 40px;
+	margin: 10px 10px 10px 0;
+	padding: 0 5px;
+}
+
+.upper-footer form input[type="text"] {
+	width: 43%;
+}
+
+.upper-footer form select {
+	display: block;
+	margin: 4px;
+	width: 60%;
+}
+
+.upper-footer form input[type="email"] {
+	width: 90%;
+}
+
+.upper-footer form label {
+	line-height: 1.8;
+	display: block;
+	margin: 10px 5px;
+}
+
+.upper-footer form label a {
+	display: block;
+}
+
+.upper-footer form label a:hover {
+	color: #11e88d;
+}
+
+
+.upper-footer form img {
+	display: block;
+	width: 85%;
+}
+
+.upper-footer form input[type="submit"] {
+	width: 40%;
+	height: 40px;
+	font-size: 20px;
+	margin: 20px 0;
+	color: rgb(51, 51, 51);
+}
+
+/* Footer rigth column */
+
+.upper-footer .container p {
+	padding: 10px;
+	color: white;
+	font-size: 15px;
+}
+
+.upper-footer .container p i {
+	color: #11e88d;
+}
+
+.upper-footer .container .map {
+	width: 90%;
+	margin-left: 10px;
+}
+
+/* Lower footer */
+
+.lower-footer {
+	background: #002856;
+	text-align: center;
+	color: white;
+	font-size: 12px;
+	height: 130px;
+}
+
+.lower-footer .copyrigth,
+.lower-footer .social {
+	width: 35%;
+	height: 100%;
+}
+
+.lower-footer .copyrigth {
+	display: inline-block;
+	text-align: left;
+}
+
+.lower-footer .copyrigth p {
+	margin: 10px;
+}
+
+.lower-footer .social {
+	padding: 40px 0;
+	vertical-align: top;
+}
+
+.lower-footer .social .icon {
+	width: 48px;
+	height: 48px;
+	font-size: 20px;
+	padding: 9px;
+	margin: 0 5px;
+	background: rgba(34, 65, 105, 0.96);
 }

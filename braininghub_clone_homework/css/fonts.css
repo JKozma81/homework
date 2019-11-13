@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'DINPro-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('DINPro-Regular'), url('./fonts/Dinpro/DINPro-Regular_13937.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'DINPro-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('DINPro-Bold'), url('./fonts/Dinpro/DINPro-Bold_13934.woff') format('woff');
+}
