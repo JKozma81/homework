@@ -1,303 +1,313 @@
 /* Css for the hero section */
 
 .hero {
-	height: 695px;
-	background: url("../img/hero.png") center/cover;
-	text-align: center;
+  height: 695px;
+  background: url('../img/hero.png') center/cover;
+  text-align: center;
 }
 
 .hero .content {
-	font-weight: bold;
-	font-size: 40px;
-	text-align: center;
-	color: white;
-	background: rgba(0, 0, 0, 0.5);
-	width: 65%;
-	display: inline-block;
-	margin-top: 200px;
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  width: 65%;
+  display: inline-block;
+  margin-top: 200px;
 }
 
 .hero .btn {
-	display: block;
-	width: 375px;
-	margin: 40px auto;
+  display: block;
+  width: 375px;
+  margin: 40px auto;
 }
 
 .hero .btn a {
-	width: 375px;
-	text-transform: uppercase;
+  width: 375px;
+  text-transform: uppercase;
 }
 
 .green-text {
-	color: #11e88d;
+  color: #11e88d;
 }
 
 /* Css for the pillars section */
 
 .pillars {
-	background: url("../img/course_bg.png") center/cover;
-	height: 520px;
-	padding: 150px 80px;
-	font-size: 16px;
-	line-height: 1.5;
+  background: url('../img/course_bg.png') center/cover;
+  height: 520px;
+  padding: 150px 80px;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .pillar {
-	width: 350px;
-	display: inline-block;
-	vertical-align: top;
-	color: black;
-	margin: 0 5px;
+  width: 330px;
+  display: inline-block;
+  vertical-align: top;
+  color: #002e54;
+  margin: 0 15px;
+  line-height: 1.8;
+  font-size: 18px;
 }
 
 .pillar .title {
-	font-family: 'DINPro-Bold';
-	display: block;
-	color: #002e54;
-	text-transform: uppercase;
-	font-size: 35px;
-	font-weight: bold;
+  font-family: 'DINPro-Bold';
+  display: block;
+  color: #002e54;
+  text-transform: uppercase;
+  font-size: 35px;
+  font-weight: bold;
 }
 
 .pillar .title:hover {
-	color: #11e88d;
+  color: #11e88d;
+  cursor: pointer;
 }
 
 /* Css for the java starter section */
 
 .javastarter {
-	height: 700px;
-	background: white;
-	text-align: center;
+  height: 700px;
+  background: white;
+  text-align: center;
 }
 
 .javastarter div.cliped-bg {
-	background: #204778;
-	width: 100%;
-	height: 100%;
-	clip-path: polygon(28% 0, 100% 12%, 100% 100%, 0 100%, 0 12%);
-	padding: 150px 0;
-	font-weight: bold;
+  background: #204778;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(28% 0, 100% 12%, 100% 100%, 0 100%, 0 12%);
+  padding: 150px 0;
+  font-weight: bold;
 }
 
 .javastarter h1 {
-	display: block;
-	color: white;
-	padding: 30px 0 50px 0;
-	font-family: "DINPro-Bold";
-	font-size: 40px;
+  display: block;
+  color: white;
+  padding: 30px 0 50px 0;
+  font-family: 'DINPro-Bold';
+  font-size: 40px;
 }
 
 .image-div,
 .course-desc {
-	display: inline-block;
+  display: inline-block;
 }
 
 .javastarter .image-div {
-	width: 250px;
-	height: 250px;
-	background: url("../img/circle.png") no-repeat center;
-	background-size: cover;
-	margin: 0 50px;
+  width: 250px;
+  height: 250px;
+  background: url('../img/circle.png') no-repeat center;
+  background-size: cover;
+  margin: 0 50px;
 }
 
 .course-desc {
-	width: 750px;
-	text-align: left;
-	vertical-align: top;
+  width: 750px;
+  text-align: left;
+  vertical-align: top;
 }
 
 .course-desc h2 {
-	color: #11e88d;
-	font-size: 40px;
-	font-family: "DINPro-Bold";
+  color: #11e88d;
+  font-size: 40px;
+  font-family: 'DINPro-Bold';
 }
 
 .course-desc p {
-	font-size: 20px;
-	color: white;
+  font-size: 20px;
+  color: white;
 }
 
 .course-desc h2,
 .course-desc p {
-	margin: 20px 0;
+  margin: 20px 0;
 }
 
 .course-desc :nth-last-child(2) {
-	color: #11e88d;
+  color: #11e88d;
 }
 
 .course-desc .btn {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 /* Css for the Test start ribbon */
 
 .start-course .links {
-	display: block;
-	height: 150px;
-	padding: 40px 0;
+  display: block;
+  height: 150px;
+  padding: 30px 0;
+  font-size: 32px;
+  font-weight: bold;
 }
 
 .start-course a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .links:first-child {
-	color: white;
-	font-weight: 400;
+  color: white;
 }
 
 .links :last-child {
-	color: yellow;
-	text-transform: uppercase;
-	font-family: "DINPro-Bold";
-	font-size: 45px;
+  color: yellow;
+  text-transform: uppercase;
+  font-family: 'DINPro-Bold';
+  font-size: 45px;
 }
 
 .links p {
-	display: block;
-	width: 50%;
-	margin: 0 auto;
+  display: block;
+  width: 50%;
+  margin: 0 auto;
 }
 
 /* Css for the bootcamp story section */
 
 .story-board {
-	text-align: center;
-	background: rgba(216, 216, 216, 0.69);
-	font-size: 18px;
-	font-weight: normal;
-	min-height: 800px;
+  text-align: center;
+  background: rgba(216, 216, 216, 0.69);
+  font-size: 18px;
+  font-weight: normal;
+  min-height: 800px;
 }
 
 .story-board h1 {
-	font-family: "DINPro-Bold";
-	font-size: 40px;
-	padding: 80px 0 30px;
+  font-family: 'DINPro-Bold';
+  font-size: 40px;
+  padding: 80px 0 30px;
 }
 
 .container {
-	width: 72%;
-	margin: auto;
+  width: 72%;
+  margin: auto;
 }
 
 .container .more {
-	color: #333;
-	text-transform: uppercase;
-	display: inline-block;
-	width: 95%;
-	background: #ebeaea;
-	height: 40px;
-	padding: 5px;
-	margin-top: 20px;
-	font-size: 18px;
-	font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  display: inline-block;
+  width: 95%;
+  background: #ebeaea;
+  height: 40px;
+  padding: 5px;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .card {
-	text-align: left;
-	background: white;
-	display: inline-block;
-	width: 30%;
-	vertical-align: top;
-	height: 500px;
-	margin: 10px;
+  text-align: left;
+  background: white;
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+  height: 500px;
+  margin: 10px;
 }
 
 .card img {
-	width: 100%;
+  width: 100%;
 }
 
 .card .pillar {
-	padding: 20px;
-	width: 100%;
+  padding: 20px;
+  width: 100%;
+  font-size: 18px;
+  line-height: 1.4;
 }
 
 .card .pillar .title {
-	font-family: "DINPro-Bold";
-	text-transform: none;
-	font-size: 30px;
-	margin-bottom: 10px;
+  font-family: 'DINPro-Bold';
+  text-transform: none;
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 
 /* Css for testimonials section */
 
 .testimonials {
-	background: url("../img/testimonials.png") center/cover;
-	text-align: center;
+  background: url('../img/testimonials.png') center/cover;
+  text-align: center;
 }
 
 .testimonials h2 {
-	font-family: "DINPro-Bold";
-	font-weight: bold;
-	font-size: 40px;
-	padding: 75px 0;
-	color: white;
+  font-family: 'DINPro-Bold';
+  font-weight: bold;
+  font-size: 40px;
+  padding: 75px 0;
+  color: white;
 }
 
 .testimonials img {
-	width: 150px;
-	border-radius: 50%;
+  width: 150px;
+  border-radius: 50%;
 }
 
 .testimonials blockquote {
-	background: rgba(255,255,255,0.22);
-	padding: 20px;
-	width: 80%;
-	margin: 30px auto 0 auto;
-	font-family: Arial, Helvetica, sans-serif;
-	font-style: italic;
-	font-size: 20px;
-	line-height: 1.8;
-	color: #383838;
+  background: rgba(255, 255, 255, 0.22);
+  padding: 20px;
+  width: 80%;
+  margin: 30px auto 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.8;
+  color: #383838;
 }
 
 .testimonials p {
-	padding: 20px;
-	font-size: 20px;
+  padding: 20px;
+  font-size: 20px;
 }
 
 /* Css for the Contact ribbon section*/
 
 .contact p {
-	margin-right: 100px;
+  margin-right: 100px;
+  font-size: 32px;
+  font-weight: normal;
 }
 
 .contact .btn {
-	background: white;
+  background: white;
 }
 
 .contact .btn a {
-	color: #11e88d;
-	text-transform: uppercase;
+  color: #11e88d;
+  text-transform: uppercase;
 }
 
 /* Css for partners section */
 
 .partners {
-	text-align: center;
-	height: 400px;
+  text-align: center;
+  height: 400px;
 }
 
 .partners .container {
-	width: 80%;
+  width: 80%;
 }
 
 .partners h2 {
-	font-family: "DINPro-Bold";
-	font-weight: bold;
-	font-size: 40px;
-	padding: 50px 0;
+  font-family: 'DINPro-Bold';
+  font-weight: bold;
+  font-size: 40px;
+  padding: 50px 0;
+  color: #002e54;
 }
 
 .partners .container .logo {
-	width: 13%;
-	display: inline-block;
-	height: 75px;
+  width: 13%;
+  display: inline-block;
+  height: 75px;
+  margin: 25px 0;
 }
 
 .partners .container .logo .logo-img {
-	width: 80%;
-	height: 80%;
+  width: 80%;
+  height: 80%;
 }
