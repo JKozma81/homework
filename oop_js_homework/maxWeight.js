@@ -40,40 +40,58 @@ class Scale {
 	}
 }
 
-const myScale = new Scale(50, 100);
-console.log('The scale:', myScale);
+/**
+ * TEST CASES
+ *
+ * Simply uncomment the codes below to test for the diferent requirements
+ */
 
-myScale.put(15);
-myScale.put(20);
+// Túl nagy súly mérlegre helyezése
 
-console.log(`First measurement: ${myScale.measure()}`);
+// const myScale = new Scale(10, 30);
+// console.log('The scale:', myScale);
 
-myScale.put(30);
+// myScale.put(15);
+// myScale.put(20);
 
-console.log('The scale:', myScale);
-console.log(`Second measurement: ${myScale.measure()}`);
+// console.log(`Measuring: ${myScale.measure()}`);
+// console.log('The scale:', myScale);
 
-myScale.put(30);
-myScale.put(30);
+///////////////////////////////////////////////////////////////////////////////////////////
 
-console.log('The scale:', myScale);
-console.log(`Third measurement: ${myScale.measure()}`);
+// Javítás lepakolás nélkül
 
-myScale.take(20);
+// const myScale = new Scale(10, 30);
+// console.log('The scale:', myScale);
 
-console.log('The scale:', myScale);
+// myScale.put(15);
+// myScale.put(20);
 
-console.log(`Forth measurement: ${myScale.measure()}`);
+// console.log(`Measuring: ${myScale.measure()}`);
+// console.log('The scale:', myScale);
+// myScale.fix();
 
-myScale.fix();
+///////////////////////////////////////////////////////////////////////////////////////////
 
-myScale.take(15);
-myScale.take(30);
-myScale.take(30);
-myScale.take(30);
+// Javítás utánni mérés
 
-console.log('The scale:', myScale);
-myScale.fix();
-console.log('The scale:', myScale);
-myScale.put(80);
-console.log(`Fifth measurement: ${myScale.measure()}`);
+// const myScale = new Scale(10, 30);
+// console.log('The scale:', myScale);
+
+// myScale.put(15);
+// myScale.put(20);
+
+// console.log(`Measuring: ${myScale.measure()}`);
+// console.log('The scale:', myScale);
+
+// myScale.take(15);
+// myScale.take(20);
+
+// myScale.fix();
+
+// console.log('The scale:', myScale);
+
+// myScale.put(10);
+// myScale.put(10);
+
+// console.log(`Measuring: ${myScale.measure()}`);

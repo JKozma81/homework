@@ -58,37 +58,83 @@ class Item {
 	}
 }
 
-const myScale = new Scale(50, 100);
-const item1 = new Item('Gaba monitor', 5);
-const item2 = new Item('Cedrus mineral water', 9);
-const item3 = new Item('LG washing machine', 50);
+/**
+ * TEST CASES
+ *
+ * Simply uncomment the codes below to test for the diferent requirements
+ */
 
-console.log('***************************************');
-console.log('The scale:', myScale);
-console.log('***************************************');
+// Dolgok elhelyezése a mérlegen
 
-myScale.put(item3);
-myScale.put(item1);
-myScale.put(item2);
+// const myScale = new Scale(10, 30);
+// const item1 = new Item('Meat', 5);
+// const item2 = new Item('Potato', 9);
+// const item3 = new Item('Salt', 10);
 
-console.log('***************************************');
-console.log(myScale.items);
-console.log(myScale.getWeight());
-console.log('***************************************');
+// console.log('The scale:', myScale);
 
-console.log('***************************************');
-console.log(myScale.take('Gaba monitor'));
-console.log('***************************************');
+// myScale.put(item3);
+// myScale.put(item1);
+// myScale.put(item2);
 
-console.log('***************************************');
-console.log('The scale:', myScale);
-console.log('***************************************');
+// console.log(myScale.items);
 
-console.log('***************************************');
-console.log(myScale.take('Basket'));
-console.log('***************************************');
+////////////////////////////////////////////////////////////////////////////////////
 
-console.log('***************************************');
-console.log(myScale.getWeight());
-console.log(myScale.measure());
-console.log('***************************************');
+// Mérlegen elhelyezett dolgok súlyának lekérése
+
+// const myScale = new Scale(10, 30);
+// const item1 = new Item('Meat', 5);
+// const item2 = new Item('Potato', 9);
+// const item3 = new Item('Salt', 10);
+
+// console.log('The scale:', myScale);
+
+// myScale.put(item3);
+// myScale.put(item1);
+// myScale.put(item2);
+
+// console.log(myScale.items);
+// console.log(myScale.getWeight());
+
+////////////////////////////////////////////////////////////////////////////////////
+
+// Mérlegen lévő dolog levétele ha az valóban rajta is van
+
+// const myScale = new Scale(10, 30);
+// const item1 = new Item('Meat', 5);
+// const item2 = new Item('Potato', 9);
+// const item3 = new Item('Salt', 10);
+
+// console.log('The scale:', myScale);
+
+// myScale.put(item3);
+// myScale.put(item1);
+// myScale.put(item2);
+
+// console.log(myScale.items);
+
+// console.log('Taking one item from the scale ', myScale.take('Meat'));
+
+// console.log(myScale.items);
+
+////////////////////////////////////////////////////////////////////////////////////
+
+// Mérlegen lévő dolog levétele ha az valójában nincs rajta
+
+// const myScale = new Scale(10, 30);
+// const item1 = new Item('Meat', 5);
+// const item2 = new Item('Potato', 9);
+// const item3 = new Item('Salt', 10);
+
+// console.log('The scale:', myScale);
+
+// myScale.put(item3);
+// myScale.put(item1);
+// myScale.put(item2);
+
+// console.log(myScale.items);
+
+// console.log('Taking one item from the scale ', myScale.take('Banana'));
+
+// console.log(myScale.items);

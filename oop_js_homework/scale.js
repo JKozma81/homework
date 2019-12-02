@@ -20,22 +20,50 @@ class Scale {
 	}
 }
 
-const myScale = new Scale(50);
-console.log('The scale:', myScale);
+/**
+ * TEST CASES
+ *
+ * Simply uncomment the codes below to test for the diferent requirements
+ */
 
-myScale.put(15);
-myScale.put(20);
+// Túl kis súllyal való mérés
 
-console.log(`Measurement: ${myScale.measure()}`);
+// const myScale = new Scale(50);
+// console.log('The scale:', myScale);
 
-myScale.put(30);
+// myScale.put(15);
+// myScale.put(20);
 
-console.log('The scale:', myScale);
+// console.log('The scale:', myScale);
+// console.log(`Measurement: ${myScale.measure()}`);
 
-console.log(`Measurement: ${myScale.measure()}`);
+///////////////////////////////////////////////////////////////////////////////////////////
 
-myScale.take(15);
+// Normál mérés
 
-console.log('The scale:', myScale);
+// const myScale = new Scale(50);
+// console.log('The scale:', myScale);
 
-console.log(`Measurement: ${myScale.measure()}`);
+// myScale.put(15);
+// myScale.put(20);
+// myScale.put(30);
+
+// console.log('The scale:', myScale);
+// console.log(`Measurement: ${myScale.measure()}`);
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+// Súly levétele
+
+// const myScale = new Scale(50);
+// console.log('The scale:', myScale);
+
+// myScale.put(15);
+// myScale.put(20);
+// myScale.put(30);
+
+// console.log('The scale:', myScale);
+
+// myScale.take(15);
+
+// console.log('The scale:', myScale);
