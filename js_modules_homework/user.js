@@ -1,4 +1,4 @@
-const users = [ 'steve', 'jhonny', 'liz', 'andrea', 'pete' ];
+const users = ['steve', 'jhonny', 'liz', 'andrea', 'pete'];
 
 function isRegistered(userName) {
 	if (users.indexOf(userName) !== -1) {
@@ -16,12 +16,7 @@ function register(userName) {
 }
 
 function getUsers() {
-	let userNames = '';
-
-	users.forEach((user, idx) => {
-		idx >= users.length - 1 ? (userNames += `${user}`) : (userNames += `${user} `);
-	});
-	return userNames;
+	return users.join(' ');
 }
 
 module.exports = { isRegistered, register, getUsers };
