@@ -14,12 +14,9 @@ class Scale {
 	}
 
 	take(itemName) {
-		let removableItem = this.items.find(item => item.name === itemName);
+		let removableItem = this.items.find((item) => item.name === itemName);
 		if (removableItem) {
-			this.items.splice(
-				this.items.findIndex(item => item === removableItem),
-				1
-			);
+			this.items.splice(this.items.findIndex((item) => item === removableItem), 1);
 			return removableItem;
 		}
 		return null;
@@ -38,9 +35,7 @@ class Scale {
 
 	fix() {
 		if (this.getWeight() > 0) {
-			console.log(
-				'Before you fix the scale you need to remove the weights!'
-			);
+			console.log('Before you fix the scale you need to remove the weights!');
 			return;
 		} else {
 			this.isBroken = false;
@@ -49,7 +44,7 @@ class Scale {
 
 	getWeight() {
 		let weight = 0;
-		this.items.forEach(item => (weight += item.weight));
+		this.items.forEach((item) => (weight += item.weight));
 		return weight;
 	}
 }
@@ -68,11 +63,9 @@ class Cook {
 
 	measure(items) {
 		if (this.scale === null) {
-			console.log(
-				"My scale is at the mechanic and can't measure the items!"
-			);
+			console.log("My scale is at the mechanic and can't measure the items!");
 		} else {
-			items.forEach(item => {
+			items.forEach((item) => {
 				this.scale.put(item);
 			});
 
@@ -87,7 +80,7 @@ class Cook {
 	getItemNames() {
 		let itemNames = [];
 
-		this.scale.items.forEach(item => {
+		this.scale.items.forEach((item) => {
 			itemNames.push(item.name);
 		});
 
@@ -98,7 +91,7 @@ class Cook {
 		if (this.scale.items.length !== 0) {
 			let items = this.getItemNames();
 
-			items.forEach(item => {
+			items.forEach((item) => {
 				this.scale.take(item);
 			});
 		}
@@ -107,27 +100,20 @@ class Cook {
 	giveToMechanic(mechanic) {
 		if (this.scale.isBroken) {
 			this.takeDownItemsFromScale();
-			mechanic.scale = this.scale;
+			mechanic.take(this.scale);
 			this.scale = null;
 		} else {
-			console.log(
-				"My scale is working fine, i don't need to give it to the mechanic!"
-			);
+			console.log("My scale is working fine, i don't need to give it to the mechanic!");
 		}
 	}
 
 	takeFromMechanic(mechanic) {
 		if (mechanic.scale && !mechanic.scale.isBroken) {
-			this.scale = mechanic.scale;
-			mechanic.scale = null;
+			this.scale = mechanic.giveBack(this);
 		} else if (mechanic.scale && mechanic.scale.isBroken) {
-			console.log(
-				'The mechanic needs to fix my scale before i can take it back!'
-			);
+			console.log('The mechanic needs to fix my scale before i can take it back!');
 		} else {
-			console.log(
-				'My scale is working fine and the mechanic has no scale!'
-			);
+			console.log('My scale is working fine and the mechanic has no scale!');
 		}
 	}
 }
@@ -137,23 +123,9 @@ class Mechanic {
 		this.scale = null;
 	}
 
-	// take(cook, scale) {
-	// 	if (scale.isBroken && scale.items.length === 0) {
-	// 		this.scale = scale;
-	// 		cook.scale = null;
-	// 		return;
-	// 	} else if (scale.isBroken && scale.items.length > 0) {
-	// 		console.log('Please take down all the things from the scale!');
-	// 	} else {
-	// 		console.log('The scale is working why to take it?');
-	// 	}
-	// }
-
-	// eredeti take metódus
 	take(scale) {
 		if (scale.isBroken && scale.items.length === 0) {
 			this.scale = scale;
-			scale = null;
 		} else if (scale.isBroken && scale.items.length > 0) {
 			console.log('Please take down all the things from the scale!');
 		} else {
@@ -256,10 +228,7 @@ class Mechanic {
 // const john = new Cook(myScale);
 // const peter = new Mechanic();
 
-// console.log(
-// 	'John measure the items please',
-// 	john.measure([item1, item2, item3])
-// );
+// console.log('John measure the items please', john.measure([ item1, item2, item3 ]));
 
 //////////////////////////////////////////////////////////////////////////////
 
@@ -273,82 +242,12 @@ class Mechanic {
 // const john = new Cook(myScale);
 // const peter = new Mechanic();
 
-// console.log(
-// 	'John measure the items please',
-// 	john.measure([item1, item2, item3])
-// );
+// console.log('John measure the items please', john.measure([ item1, item2, item3 ]));
 
 // john.giveToMechanic(peter);
 
 // console.log('Kukta mérlege: ', john.scale);
 // console.log('Szerelőnél lévő mérleg: ', peter.scale);
-
-//////////////////////////////////////////////////////////////////////////////
-
-// Rossz mérleget átveszi a szerelő a kuktától lepakolás nélkül
-
-// const myScale = new Scale(2, 10);
-// const item1 = new Item('Potato', 2);
-// const item2 = new Item('Salad', 4);
-// const item3 = new Item('Meat', 5);
-
-// const john = new Cook(myScale);
-// const peter = new Mechanic();
-
-// console.log(
-// 	'John measure the items please',
-// 	john.measure([item1, item2, item3])
-// );
-
-// peter.take(john, john.scale);
-
-//////////////////////////////////////////////////////////////////////////////
-
-// Rossz mérleget átveszi a szerelő a kuktától
-
-// const myScale = new Scale(2, 10);
-// const item1 = new Item('Potato', 2);
-// const item2 = new Item('Salad', 4);
-// const item3 = new Item('Meat', 5);
-
-// const john = new Cook(myScale);
-// const peter = new Mechanic();
-
-// console.log(
-// 	'John measure the items please',
-// 	john.measure([item1, item2, item3])
-// );
-
-// john.takeDownItemsFromScale();
-
-// peter.take(john, john.scale);
-
-// console.log('Szerelőnél lévő mérleg: ', peter.scale);
-// console.log('Kukta mérlege: ', john.scale);
-
-//////////////////////////////////////////////////////////////////////////////
-
-// Rossz mérleget átveszi a szerelő a kuktától a szerintem rossz take metódussal
-
-const myScale = new Scale(2, 10);
-const item1 = new Item('Potato', 2);
-const item2 = new Item('Salad', 4);
-const item3 = new Item('Meat', 5);
-
-const john = new Cook(myScale);
-const peter = new Mechanic();
-
-console.log(
-	'John measure the items please',
-	john.measure([item1, item2, item3])
-);
-
-john.takeDownItemsFromScale();
-
-peter.take(john.scale);
-
-console.log('Kukta mérlege: ', john.scale);
-console.log('Szerelőnél lévő mérleg: ', peter.scale);
 
 //////////////////////////////////////////////////////////////////////////////
 
@@ -362,10 +261,7 @@ console.log('Szerelőnél lévő mérleg: ', peter.scale);
 // const john = new Cook(myScale);
 // const peter = new Mechanic();
 
-// console.log(
-// 	'John measure the items please',
-// 	john.measure([item1, item2, item3])
-// );
+// console.log('John measure the items please', john.measure([ item1, item2, item3 ]));
 
 // john.giveToMechanic(peter);
 
@@ -386,10 +282,7 @@ console.log('Szerelőnél lévő mérleg: ', peter.scale);
 // const john = new Cook(myScale);
 // const peter = new Mechanic();
 
-// console.log(
-// 	'John measure the items please',
-// 	john.measure([item1, item2, item3])
-// );
+// console.log('John measure the items please', john.measure([ item1, item2, item3 ]));
 
 // john.giveToMechanic(peter);
 
@@ -410,18 +303,15 @@ console.log('Szerelőnél lévő mérleg: ', peter.scale);
 // const john = new Cook(myScale);
 // const peter = new Mechanic();
 
-// console.log(
-// 	'John measure the items please',
-// 	john.measure([item1, item2, item3])
-// );
+// console.log('John measure the items please', john.measure([ item1, item2, item3 ]));
 
 // john.giveToMechanic(peter);
 
-// console.log('Szerelőnél lévő mérleg állapota: ', peter.scale.isBroken);
+// console.log('Rossz a szerelőnél lévő mérleg?: ', peter.scale.isBroken);
 
 // peter.fix();
 
-// console.log('Szerelőnél lévő mérleg állapota: ', peter.scale.isBroken);
+// console.log('Rossz a szerelőnél lévő mérleg?: ', peter.scale.isBroken);
 
 //////////////////////////////////////////////////////////////////////////////
 
@@ -435,10 +325,7 @@ console.log('Szerelőnél lévő mérleg: ', peter.scale);
 // const john = new Cook(myScale);
 // const peter = new Mechanic();
 
-// console.log(
-// 	'John measure the items please',
-// 	john.measure([item1, item2, item3])
-// );
+// console.log('John measure the items please', john.measure([ item1, item2, item3 ]));
 
 // john.giveToMechanic(peter);
 
@@ -450,7 +337,7 @@ console.log('Szerelőnél lévő mérleg: ', peter.scale);
 // console.log('Kukta mérlege: ', john.scale);
 // console.log('Szerelőnél lévő mérleg: ', peter.scale);
 
-// console.log('John measure the items please', john.measure([item1, item2]));
+// console.log('John measure the items please', john.measure([ item1, item2 ]));
 
 //////////////////////////////////////////////////////////////////////////////
 
@@ -464,19 +351,16 @@ console.log('Szerelőnél lévő mérleg: ', peter.scale);
 // const john = new Cook(myScale);
 // const peter = new Mechanic();
 
-// console.log(
-// 	'John measure the items please',
-// 	john.measure([item1, item2, item3])
-// );
+// console.log('John measure the items please', john.measure([ item1, item2, item3 ]));
 
 // john.giveToMechanic(peter);
 
-// console.log('Szerelőnél lévő mérleg állapota: ', peter.scale.isBroken);
+// console.log('Rossz a szerelőnél lévő mérleg?: ', peter.scale.isBroken);
 
 // peter.fix();
 // peter.giveBack(john);
 
-// console.log('Kukta mérlege: ', john.scale);
 // console.log('Szerelőnél lévő mérleg: ', peter.scale);
+// console.log('Kukta mérlege: ', john.scale);
 
-// console.log('John measure the items please', john.measure([item1, item2]));
+// console.log('John measure the items please', john.measure([ item1, item2 ]));
