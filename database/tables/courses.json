@@ -1,0 +1,14 @@
+[
+	{
+		"name": "junior web developer",
+		"students": [1, 2, 3, 4],
+		"maxPoints": 100,
+		"id": 1
+	},
+	{
+		"name": "junior java developer",
+		"students": [5, 6, 7, 8],
+		"maxPoints": 100,
+		"id": 2
+	}
+]

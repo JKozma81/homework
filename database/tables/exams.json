@@ -1,0 +1,44 @@
+[
+	{
+		"courseId": 1,
+		"points": [
+			{
+				"studentId": 1,
+				"points": 70
+			},
+			{
+				"studentId": 2,
+				"points": 98
+			},
+			{
+				"studentId": 3,
+				"points": 76
+			},
+			{
+				"studentId": 4,
+				"points": 63
+			}
+		]
+	},
+	{
+		"courseId": 2,
+		"points": [
+			{
+				"studentId": 5,
+				"points": 35
+			},
+			{
+				"studentId": 6,
+				"points": 60
+			},
+			{
+				"studentId": 7,
+				"points": 55
+			},
+			{
+				"studentId": 8,
+				"points": 89
+			}
+		]
+	}
+]
