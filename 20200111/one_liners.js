@@ -25,10 +25,7 @@ console.log(containsChars(strs, chars));
 
 const nums = [ 1, 2, 3, 4, 5, -6, -7, -8, -9, 10 ];
 
-const getMax = (numList) =>
-	numList.reduce((maxVal, curentVal) => {
-		return (maxVal = curentVal > maxVal ? curentVal : maxVal);
-	}, 0);
+const getMax = (numList) => numList.reduce((maxVal, curentVal) => (maxVal = curentVal > maxVal ? curentVal : maxVal));
 
 console.log(getMax(nums));
 
