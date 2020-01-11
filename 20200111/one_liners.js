@@ -15,7 +15,7 @@ console.log(division(t, u));
 const strs = [ 'aaa', 'abba', 'edda', 'abc' ];
 const chars = 'cba';
 
-const containsChars = (words, chars) => words.filter((word) => [ ...chars ].every((char) => word.includes(char)));
+const containsChars = (words, chars) => words.filter((word) => chars.split('').every((char) => word.includes(char)));
 
 console.log(containsChars(strs, chars));
 
