@@ -1,0 +1,15 @@
+{
+  "name": "20200111",
+  "version": "1.0.0",
+  "description": "",
+  "main": "one_liners.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sqlite3": "^4.1.1"
+  }
+}
