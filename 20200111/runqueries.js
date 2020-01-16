@@ -1,30 +1,29 @@
 const sqlite3 = require('sqlite3').verbose();
+const fs = require('fs');
 
+const QUERYLIST = fs.readFileSync('./sqlquerys.sql').toString().split('--');
 const DBFILE = './DB/sqlhw01';
+
 const QUERIES = {
 	1: {
 		desc: 'Az 5. Golden Globe Díjátadó jelöltjei:',
-		query:
-			'SELECT nominee FROM awards WHERE ceremony = 5 AND (category LIKE "%Actress%" OR category LIKE "%Actor%");'
+		query: QUERYLIST[0]
 	},
 
 	2: {
 		desc: 'Az 5. Golden Globe Díjátadó nyertesei:',
-		query:
-			'SELECT nominee FROM awards WHERE ceremony = 5 AND (category LIKE "%Actress%" OR category LIKE "%Actor%") AND win = "True";'
+		query: QUERYLIST[1]
 	},
 
 	3: {
 		desc: 'Az 1950-es években Golden Globe Díjra jelöltek:',
-		query:
-			'SELECT DISTINCT nominee FROM awards WHERE year_award BETWEEN 1950 AND 1959 AND (category LIKE "%Actress%" OR category LIKE "%Actor%");'
+		query: QUERYLIST[2]
 	},
 
 	4: {
 		desc:
 			'Azoknak az éveknek a listája, amikor Meryl Streep úgy nyert díjat, hogy a megelőző évben is jelölték, de akkor nem nyert:',
-		query:
-			'SELECT DISTINCT a.year_award FROM awards AS a JOIN awards AS b ON a.nominee = b.nominee WHERE a.nominee = "Meryl Streep" AND b.nominee = "Meryl Streep" AND a.year_award = b.year_award + 1 AND a.win = "True" AND b.win = "False";'
+		query: QUERYLIST[3]
 	}
 };
 
