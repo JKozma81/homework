@@ -28,7 +28,9 @@ const QUERIES = {
 };
 
 const queryId = parseInt(process.argv[2]);
-const queryCondParam = process.argv[3];
+const queryCondParam = !(parseInt(process.argv[3]) % 10)
+	? process.argv[3]
+	: parseInt(process.argv[3]) - parseInt(process.argv[3]) % 10;
 
 const modifyStr = (strToModify, queryNum, queryCondParam) => {
 	if ((strToModify === 'desc' || strToModify === 'query') && (queryNum === 1 || queryNum === 2)) {
