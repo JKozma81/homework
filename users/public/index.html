@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>USERS</title>
+</head>
+<body>
+  <h1>ADD USER</h1>
+
+  <form action="/adduser" method="POST">
+    <label for="userName">Name: </label>
+    <input id="userName" type="text" name="user_name">
+    <label for="userEmail">Email: </label>
+    <input id="userEmail" type="email" name="user_email">
+    <label for="userPass">Password: </label>
+    <input id="userPass" type="password" name="user_password">
+    <input type="submit">
+  </form>
+</body>
+</html>

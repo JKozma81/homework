@@ -1,0 +1,19 @@
+{
+	"name": "users",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "nodemon --inspect index.js"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"express": "^4.17.1",
+		"sqlite3": "^4.1.1"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.2"
+	}
+}
