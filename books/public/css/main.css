@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 20px 0;
+    text-align: center;
+}
+
+table {
+    margin: 0 auto;
+}
+
+th {
+    color: #fff;
+    background-color: #222;
+    font-size: 22px;
+}
+
+th, td {
+    height: 30px;
+    padding: 10px;
+}
+
+table, td, th, form {
+    border: 1px solid black;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #888;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+    padding: 3px;
+}
+
+.btn a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #666;
+    cursor: pointer;
+}
+
+body > .btn {
+    display: block;
+   margin: 10px auto;
+}
+
+form {
+    width: 500px;
+    margin: 10px auto;
+    text-align: center;
+    line-height: 1.8;
+}
+
+input[type="text"] {
+    height: 25px;
+    padding: 0 5px;
+}
+
+input[type="submit"] {
+    width: 100px;
+    height: 25px;
+    margin: 5px;
+}
+
+form, form div {
+    padding: 20px 10px;
+}
+
+form div {
+    width: 100%;
+}
+
+form div input {
+    width: 70%;
+}
+

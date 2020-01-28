@@ -1,0 +1,23 @@
+<h1>Books</h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Operations</th>
+    </tr>
+    {{#each bookList}}
+    <tr>
+        <td>{{id}}</td>
+        <td>{{title}}</td>
+        <td>{{author}}</td>
+        <td>
+            <div class="btn"><a href="/edit.html?id={{id}}">Edit book</a></div>
+            <div class="btn"><a href="/delete.html?id={{id}}">Delete book</a></div>
+        </td>
+    </tr>
+    {{/each}}
+</table>
+
+<div class="btn"><a href="/new-book.html">New Book</a></div>
