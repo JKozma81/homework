@@ -1,0 +1,18 @@
+<h2>Messages that you have been sent out:</h2>
+
+<table>
+    <tr>
+        <th>Date</th>
+        <th>To</th>
+        <th>Subject</th>
+    </tr>
+    <tr>
+        {{#each sentMsgs}}
+        <td>{{date}}</td>
+        <td>{{to}}</td>
+        <td>{{subject}}</td>
+        <td>{{content}}</td>
+        {{/each}}
+    </tr>
+</table>
+<a href="/inbox">Back</a>

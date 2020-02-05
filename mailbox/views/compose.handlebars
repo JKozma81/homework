@@ -1,0 +1,31 @@
+<h2>Write a message:</h2>
+
+<form action="/compose" method="POST" id="msgForm">
+
+    <label for="messageTo">Addressee:</label>
+    <input type="text" name="to" id="messageTo" value="{{#if replyMsg.to}}{{replyMsg.to}}{{/if}}">
+
+    <label for="subject">Subject:</label>
+    <input type="text" name="subject" id="subject" value="{{#if replyMsg.subject}}RE: {{replyMsg.subject}}{{/if}}">
+
+    <label for="content">Content:</label>
+    <textarea name="content" id="content" cols="30" rows="10"></textarea>
+
+    <input type="submit" value="Send message">
+
+</form>
+
+<script>
+    const messageForm = document.querySelector('#msgForm');
+    messageForm.addEventListener('submit', () => {
+
+        if (document.URL.includes('?')) {
+            const urlParam = document.URL.split('?')[1];
+            console.log(urlParam);
+
+            if (urlParam === 'alert=success') alert('Email sent!');
+            if (urlParam === 'alert=fail') alert("Can't send your email!");
+        }
+
+    });
+</script>
