@@ -1,7 +1,3 @@
-<a href="/inbox">Inbox messages</a>
-<a href="/sent">Sent messages</a>
-<a href="/compose">Write a message</a>
-
 <h2>Messages in your box:</h2>
 
 <table>
@@ -10,12 +6,12 @@
         <th>From</th>
         <th>Subject</th>
     </tr>
-    <tr>
-        {{#each inboxMsgs}}
-        <td>{{date}}</td>
-        <td>{{from}}</td>
-        <td>{{subject}}</td>
-        <td><a href="/view/{{id}}">Read</a></td>
-        {{/each}}
-    </tr>
+    {{#each inboxMsgs}}
+        <tr>
+            <td>{{date}}</td>
+            <td>{{from}}</td>
+            <td>{{subject}}</td>
+            <td><a href="/view/{{id}}">Read</a></td>
+        </tr>
+    {{/each}}
 </table>

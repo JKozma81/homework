@@ -3,7 +3,7 @@
 <form action="/compose" method="POST" id="msgForm">
 
     <label for="messageTo">Addressee:</label>
-    <input type="text" name="to" id="messageTo" value="{{#if replyMsg.to}}{{replyMsg.to}}{{/if}}">
+    <input type="text" name="to" id="messageTo" value="{{#if replyMsg.to}}{{replyMsg.to}}{{/if}}" required>
 
     <label for="subject">Subject:</label>
     <input type="text" name="subject" id="subject" value="{{#if replyMsg.subject}}RE: {{replyMsg.subject}}{{/if}}">
@@ -16,16 +16,11 @@
 </form>
 
 <script>
-    const messageForm = document.querySelector('#msgForm');
-    messageForm.addEventListener('submit', () => {
-
-        if (document.URL.includes('?')) {
-            const urlParam = document.URL.split('?')[1];
-            console.log(urlParam);
-
-            if (urlParam === 'alert=success') alert('Email sent!');
-            if (urlParam === 'alert=fail') alert("Can't send your email!");
-        }
-
-    });
+    const urlReplyParam = location.search.split('=')[1];
+    switch(urlReplyParam) {
+        case 'success': alert('Your message was sent!');
+            break;
+        case 'failed': alert("Can't send your message!");
+            break;
+    }
 </script>
