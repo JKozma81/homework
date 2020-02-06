@@ -3,21 +3,23 @@
 <form action="/compose" method="POST" id="msgForm">
 
     <label for="messageTo">Addressee:</label>
-    <input type="text" name="to" id="messageTo" value="{{#if replyMsg.to}}{{replyMsg.to}}{{/if}}" required>
+    <input type="text" name="to" id="messageTo" value="{{#if replyMsg.to}}{{replyMsg.to}}{{/if}}" class="u-full-width"
+        required>
 
     <label for="subject">Subject:</label>
-    <input type="text" name="subject" id="subject" value="{{#if replyMsg.subject}}RE: {{replyMsg.subject}}{{/if}}">
+    <input type="text" name="subject" id="subject" value="{{#if replyMsg.subject}}RE: {{replyMsg.subject}}{{/if}}"
+        class="u-full-width">
 
     <label for="content">Content:</label>
-    <textarea name="content" id="content" cols="30" rows="10"></textarea>
+    <textarea name="content" id="content" cols="30" rows="10" class="u-full-width"></textarea>
 
-    <input type="submit" value="Send message">
+    <input type="submit" value="Send message" class="button-primary">
 
 </form>
 
 <script>
     const urlReplyParam = location.search.split('=')[1];
-    switch(urlReplyParam) {
+    switch (urlReplyParam) {
         case 'success': alert('Your message was sent!');
             break;
         case 'failed': alert("Can't send your message!");

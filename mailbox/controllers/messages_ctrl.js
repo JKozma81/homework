@@ -10,7 +10,7 @@ function getInbox(req, res) {
 
 function getSent(req, res) {
 	const sentMsgs = getMessages('sent');
-	res.render('inbox', { sentMsgs });
+	res.render('sent', { sentMsgs });
 }
 
 function getCompose(req, res) {
@@ -24,7 +24,7 @@ function getCompose(req, res) {
 
 function getDetails(req, res) {
 	const msg = getMessages('inbox').find((msg) => msg.id == req.params.msgID);
-	res.render('msgDetail', { msg });
+	res.render('msgdetail', { msg });
 }
 
 function receiveMsg(req, res) {
@@ -46,6 +46,7 @@ function sendMsg(req, res) {
 	})
 		.then((result) => {
 			if (result.status === 200) {
+				addMessage('sent', msg);
 				res.redirect('/compose?alert=success');
 				return;
 			}

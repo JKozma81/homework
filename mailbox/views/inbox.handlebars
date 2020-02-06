@@ -1,17 +1,22 @@
 <h2>Messages in your box:</h2>
 
-<table>
-    <tr>
-        <th>Date</th>
-        <th>From</th>
-        <th>Subject</th>
-    </tr>
-    {{#each inboxMsgs}}
+<table class="u-full-width">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>From</th>
+            <th>Subject</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        {{#each inboxMsgs}}
         <tr>
             <td>{{date}}</td>
             <td>{{from}}</td>
             <td>{{subject}}</td>
-            <td><a href="/view/{{id}}">Read</a></td>
+            <td><a href="/view/{{id}}" class="button">Read</a></td>
         </tr>
-    {{/each}}
+        {{/each}}
+    </tbody>
 </table>

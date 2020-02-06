@@ -13,7 +13,7 @@ class Message {
 	}
 }
 
-const inboxMessages = [ new Message('1a2b3c4d.ngrok.io', '4d3c2b1a.ngrok.io', 'Teszt', 'This is a test message') ];
+const inboxMessages = [new Message('1a2b3c4d.ngrok.io', '4d3c2b1a.ngrok.io', 'Teszt', 'This is a test message')];
 const sentMessages = [];
 
 function getMessages(flag) {
