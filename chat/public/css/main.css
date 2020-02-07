@@ -1,0 +1,44 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+.main-header {
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    background-color: blue;
+    color: white;
+}
+
+.main-header .button {
+    color: white;
+}
+
+.main-content {
+    padding: 25px;
+    width: 100%;
+    height: 70%;
+    overflow-y: scroll;
+}
+
+.main-content ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.main-footer {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+
+.main-footer p {
+    margin: 0;
+    padding: 0;
+}
