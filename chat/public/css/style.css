@@ -6,6 +6,46 @@ html, body {
     padding: 0;
 }
 
+body {
+    position: relative;
+}
+
+.modal input[type="submit"] {
+    color: #888;
+}
+
+.modal input[type="submit"]:hover {
+    color: white;
+}
+
+.modal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    color: white;
+    background-color: rgba(0, 0, 0, .8);
+    width: 100%;
+    height: 100%;
+}
+
+.modal .error-message {
+    color: red;
+    display: none;
+}
+
+.modal form, .modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#server_url {
+    width: 50%;
+    color: black;
+}
+
 .main-header {
     width: 100%;
     height: 20%;
