@@ -3,7 +3,7 @@ const messages = [];
 class Message {
     constructor(to, from, content) {
         this.id = messages.length;
-        this.date = new Date().toISOString();
+        this.date = new Date().toISOString().split('.')[0];
         this.to = to;
         this.from = from;
         this.content = content;

@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.post('/messages', (req, res) => {
     try {
-        addMessage(clientAddress, myAddress, req.body.content);
+        addMessage(myAddress, clientAddress, req.body.content);
         res.status(200).send();
     } catch (err) {
         console.error(err.message);
@@ -55,6 +55,10 @@ app.post('/forward', (req, res) => {
         res.status(404).send();
     }
 });
+
+app.get('/', (req, res) => {
+    res.redirect('/messages');
+})
 
 app.listen(PORT, () => console.log(`Server is started and listening on port ${PORT}`));
 
