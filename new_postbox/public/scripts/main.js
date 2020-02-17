@@ -35,10 +35,10 @@ window.addEventListener('load', function () {
                 form.classList.remove('was-validated')
                 if (resp.status !== 200) {
                     alertFail.classList.add('show');
-                    this.setTimeout(() => alertFail.classList.remove('show'), 3000)
+                    setTimeout(() => alertFail.classList.remove('show'), 3000)
                     return;
                 }
-                this.setTimeout(() => alertSuccess.classList.remove('show'), 3000)
+                setTimeout(() => alertSuccess.classList.remove('show'), 3000)
                 alertSuccess.classList.add('show');
                 nameAndAddress.value = '';
                 messageText.value = '';
