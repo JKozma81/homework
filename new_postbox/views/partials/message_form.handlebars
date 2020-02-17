@@ -1,0 +1,24 @@
+<form class="needs-validation border p-3" novalidate>
+    <div class="mb-3">
+        <label for="validation01">Address:</label>
+        <input type="text" class="form-control" id="validation01" placeholder="<name> example.ngrok.io"
+            name="nameAndAddress" required>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            Please provide the name and address.
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="FormControlTextarea">Example textarea</label>
+        <textarea class="form-control" id="FormControlTextarea" rows="3" name="message" required></textarea>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            Please enter some message.
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Send message</button>
+</form>
