@@ -1,47 +1,47 @@
 <div class="container pt-5">
 
-	<table class="table table-bordered">
-		<thead class="thead-dark">
-			<tr>
-				<th>Product Name</th>
-				<th>Product Category</th>
-			</tr>
-		</thead>
-		<tbody>
+  <table class="table table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th>Product Name</th>
+      <th>Product Category</th>
+    </tr>
+  </thead>
+  <tbody>
 
-		</tbody>
-	</table>
+  </tbody>
+</table>
 
 </div>
 
 <script>
-	const tableBody = document.querySelector('tbody');
-	fetch('http://localhost:3000/products')
-		.then((stream) => stream.json())
-		.then((data) => {
-			data.forEach((prodId) => {
-				fetch(`http://localhost:3000/products/${prodId}`).then((stream) => stream.json()).then((prodData) => {
-					const tr = document.createElement('TR');
-					tr.setAttribute('data-id', prodData.id);
-					tableBody.appendChild(tr);
-					const tdName = document.createElement('TD');
-					tdName.textContent = prodData.displayName;
-					tr.appendChild(tdName);
-					const tdCategory = document.createElement('TD');
-					tdCategory.setAttribute('data-catId', prodData.categoryId);
-					tr.appendChild(tdCategory);
-				});
-			});
-			return fetch('http://localhost:3030/categories');
-		})
-		.then((stream) => stream.json())
-		.then((categoryIds) => {
-			categoryIds.forEach((catId) => {
-				fetch(`http://localhost:3030/categories/${catId}`).then((stream) => stream.json()).then((catInfo) => {
-					document
-						.querySelectorAll(`td[data-catId="${catId}"]`)
-						.forEach((td) => (td.textContent = catInfo.displayName));
-				});
+  const tableBody = document.querySelector('tbody');
+  fetch('http://localhost:3000/products')
+	.then((stream) => stream.json())
+	.then((data) => {
+		data.forEach((prodId) => {
+			fetch(`http://localhost:3000/products/${prodId}`).then((stream) => stream.json()).then((prodData) => {
+				const tr = document.createElement('TR');
+				tr.setAttribute('data-id', prodData.id);
+				tableBody.appendChild(tr);
+				const tdName = document.createElement('TD');
+				tdName.textContent = prodData.displayName;
+				tr.appendChild(tdName);
+				const tdCategory = document.createElement('TD');
+				tdCategory.setAttribute('data-catId', prodData.categoryId);
+				tr.appendChild(tdCategory);
 			});
 		});
+		return fetch('http://localhost:3030/categories');
+	})
+	.then((stream) => stream.json())
+	.then((categoryIds) => {
+		categoryIds.forEach((catId) => {
+			fetch(`http://localhost:3030/categories/${catId}`).then((stream) => stream.json()).then((catInfo) => {
+				document
+					.querySelectorAll(`td[data-catId="${catId}"]`)
+					.forEach((td) => (td.textContent = catInfo.displayName));
+			});
+		});
+	});
 </script>
