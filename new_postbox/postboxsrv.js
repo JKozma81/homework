@@ -26,23 +26,28 @@ app.get('/inbox', (req, res) => {
 });
 
 app.post('/inbox', (req, res) => {
-	mails.push(req.body);
+	mails.unshift(req.body);
 	res.sendStatus(200);
 });
 
 app.post('/outgoing', (req, res) => {
-	const { nameAndAddress, message } = req.body;
+	let { nameAndAddress, message } = req.body;
+
+	nameAndAddress = nameAndAddress.split(' ');
+
 	const url =
-		nameAndAddress.split(' ').length === 2
-			? 'http://' + nameAndAddress.split(' ')[1]
-			: 'http://' + nameAndAddress + '/inbox';
+		nameAndAddress.length === 2
+			? 'http://' + nameAndAddress[1] + '/inbox'
+			: 'http://' + nameAndAddress[0] + '/inbox';
+
+	const from = nameAndAddress.length === 2 ? nameAndAddress.join(' ') : '<Anonymous> ' + nameAndAddress[0];
 
 	fetch(`${url}`, {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'Application/json'
 		},
-		body: JSON.stringify({ from: nameAndAddress, message })
+		body: JSON.stringify({ from, message })
 	})
 		.then((resp) => {
 			if (resp.status === 200) {
@@ -53,7 +58,7 @@ app.post('/outgoing', (req, res) => {
 		})
 		.catch((err) => {
 			console.error(err.toString());
-			res.json({ message: err.toString() });
+			res.status(404).json({ message: err.toString() });
 		});
 });
 

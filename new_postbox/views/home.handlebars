@@ -1,18 +1,14 @@
 <div class="container">
-    <div class="container mb-5 alert-container">
-        {{!-- both alerts can be removed --}}
-        <div class="alert alert-success fade" role="alert">
-            <strong>Succes!</strong> Your message was sent.
-        </div>
-        <div class="alert alert-danger fade" role="alert">
-            <strong>Failed!</strong> Can't send your message.
-        </div>
+    <div class="container mb-5 alert-container p-3">
         {{> message_form }}
     </div>
     <div class="container-fluid border">
         <h1 class="mt-3 mb-3">Messages:</h1>
         <div class="container m-3 p-3 message-container">
             {{!-- messages here --}}
+            <ul>
+
+            </ul>
         </div>
     </div>
 </div>
